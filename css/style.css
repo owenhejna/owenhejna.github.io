@@ -105,3 +105,71 @@ section img {
     max-width: 100%;
   }
 }
+/* ====== Wildlife Sightings Page ====== */
+
+.wildlife-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Toggle buttons */
+.view-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.view-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.view-buttons button.active {
+  background-color: #333;
+  color: white;
+}
+
+/* Sighting entries (default list view) */
+#sightings.list-view .sighting {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#sightings.list-view .sighting img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Grid view */
+#sightings.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+#sightings.grid-view .sighting {
+  display: block;
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#sightings.grid-view .sighting img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+
