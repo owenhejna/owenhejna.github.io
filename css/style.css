@@ -1,0 +1,107 @@
+/* ====== Reset and basic body styling ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ====== Header styling ====== */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Main content ====== */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* ====== Images ====== */
+section img {
+  display: block;
+  margin-top: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== About Me Flex Layout ====== */
+.about-me {
+  display: flex;
+  align-items: center;        /* vertically center text and image */
+  justify-content: space-between; /* space between text and image */
+  gap: 2rem;                  /* space between the two sides */
+  margin-bottom: 3rem;
+}
+
+.about-text {
+  flex: 1;                    /* take up left space */
+}
+
+.about-image {
+  flex: 1;                    /* take up right space */
+}
+
+.about-image img {
+  width: 100%;                /* fill container */
+  max-width: 500px;           /* limit maximum size */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ====== Mobile Responsiveness ====== */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;   /* stack text above image */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    flex: unset;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
