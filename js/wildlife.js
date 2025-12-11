@@ -77,6 +77,41 @@ const sightingData = {
     scientific: "Momotus lessonii",
     description: "Found this magnificent bird in some jungle near where we were staying in Costa Rica. One of my favorite bird sightings of all time.",
     img: "../photos/motmot.png"
+  },
+    "American Bison": {
+    scientific: "Bison bison",
+    description: "A massive bull grazing in Yellowstone during a late winter trip. Nothing like seeing these giants where they truly belong.",
+    img: "../photos/Bison bison.png"
+  },
+
+  "Elk": {
+    scientific: "Cervus canadensis",
+    description: "A small herd was hanging out near a pull-off in Yellowstone. Super vocal that morning and totally unfazed by visitors.",
+    img: "../photos/elk.png"
+  },
+
+  "American Bittern": {
+    scientific: "Botaurus lentiginosus",
+    description: "Finally got eyes on this secretive marsh bird at Montrose Point. It froze perfectly still like it was trying to become a reed.",
+    img: "../photos/bittern.png"
+  },
+
+  "Egyptian Goose": {
+    scientific: "Alopochen aegyptiaca",
+    description: "A colorful pair lounging on a canal in Amsterdam. Not native, but surprisingly common—absolute chaos birds.",
+    img: "../photos/egyptiangeese.png"
+  },
+
+  "Long-eared Owl": {
+    scientific: "Asio otus",
+    description: "This one was roosting along a quiet trail in Chicago. I nearly walked past it before noticing the tall ear tufts.",
+    img: "../photos/longearedowl.png"
+  },
+
+  "Pileated Woodpecker": {
+    scientific: "Dryocopus pileatus",
+    description: "I heard the loud drumming before I saw it. Caught this one working a fallen log in northern Michigan. Jurassic Park energy.",
+    img: "../photos/pilleated.png"
   }
 };
 
