@@ -1,16 +1,16 @@
 /* ====== Reset and basic body styling ====== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Geom', 'Poppins';
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #BCB88A;
+  color: #312E26;
 }
 
 /* ====== Header styling ====== */
 header {
-  background-color: #333;
-  color: white;
+  background-color: #656D4A;
+  color: #1b1b1b;
   padding: .75rem 0;
   text-align: center;
 }
@@ -25,7 +25,7 @@ header nav {
 }
 
 header nav a {
-  color: white;
+  color: #1b1b1b;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
@@ -70,7 +70,7 @@ section img {
   font-size: 0.85rem;
   font-style: italic;
   text-align: center;
-  color: #666;
+  color: #312E26;
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
@@ -78,7 +78,7 @@ section img {
 /* ====== About Me Flex Layout ====== */
 .about-me {
   margin-bottom: 1rem;
-  overflow: auto; /* Clearfix for floated image */
+  overflow: auto;
 }
 
 .about-me h2 {
@@ -350,7 +350,7 @@ section img {
   margin: 2rem auto;
   padding: 1rem 1.5rem;
   text-align: center;
-  background: #ffffff;
+  background: #BCB88A;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -362,7 +362,27 @@ section img {
 
 .sightings-intro p {
   font-size: 1.1rem;
-  color: #555;
+  color: #312E26;
 }
+
+.site-footer {
+    display: flex;              /* use flex layout */
+    justify-content: center;    /* center horizontally */
+    align-items: center;        /* center vertically */
+    padding: 2rem 0;
+}
+
+.footer-icons {
+    display: flex;              /* this makes the children line up side by side */
+    gap: 2rem;                  /* spacing between icons */
+}
+
+.footer-icons a img,
+.footer-icons a svg {
+    width: 50px;   /* bigger icons */
+    height: 50px;
+    display: block;
+}
+
 
 

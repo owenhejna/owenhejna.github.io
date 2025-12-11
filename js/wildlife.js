@@ -80,37 +80,37 @@ const sightingData = {
   },
     "American Bison": {
     scientific: "Bison bison",
-    description: "A massive bull grazing in Yellowstone during a late winter trip. Nothing like seeing these giants where they truly belong.",
-    img: "../photos/Bison bison.png"
+    description: "Found this massive guy just outside the ranger station in Yellowstone National Park. Seems to be wearing some sort of collar?",
+    img: "../photos/bison.png"
   },
 
   "Elk": {
     scientific: "Cervus canadensis",
-    description: "A small herd was hanging out near a pull-off in Yellowstone. Super vocal that morning and totally unfazed by visitors.",
+    description: "Similar to the Bison, this guy was found right outside the visitor's center. Didn't seem to phased by people or cars.",
     img: "../photos/elk.png"
   },
 
   "American Bittern": {
     scientific: "Botaurus lentiginosus",
-    description: "Finally got eyes on this secretive marsh bird at Montrose Point. It froze perfectly still like it was trying to become a reed.",
+    description: "Finally got eyes on this secretive marsh bird while leading a volunteer group at Lincoln Park Zoo's Nature Boardwalk. Shout out to the photographer who showed it to us!",
     img: "../photos/bittern.png"
   },
 
   "Egyptian Goose": {
     scientific: "Alopochen aegyptiaca",
-    description: "A colorful pair lounging on a canal in Amsterdam. Not native, but surprisingly common—absolute chaos birds.",
+    description: "Saw these two in Vondelpark while on a European trip with some friends. Also I spotted these guys on my birthday!",
     img: "../photos/egyptiangeese.png"
   },
 
   "Long-eared Owl": {
     scientific: "Asio otus",
-    description: "This one was roosting along a quiet trail in Chicago. I nearly walked past it before noticing the tall ear tufts.",
+    description: "Found this owl roosting in some bramble at Montrose. Those ears really do a great job of breaking up the body shape. Sorry for the bad picture!",
     img: "../photos/longearedowl.png"
   },
 
   "Pileated Woodpecker": {
     scientific: "Dryocopus pileatus",
-    description: "I heard the loud drumming before I saw it. Caught this one working a fallen log in northern Michigan. Jurassic Park energy.",
+    description: "My first pileated sighting since I was a young boy. Saw this guy drumming away at an fallen tree. Lots of good bugs for sure!",
     img: "../photos/pilleated.png"
   }
 };
