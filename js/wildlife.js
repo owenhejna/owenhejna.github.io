@@ -116,43 +116,43 @@ const sightingData = {
 
   "Mexican Free-tailed Bat": {
   scientific: "Tadarida brasiliensis",
-  description: "Observed in Tulum during their evening foraging flights. Fast, agile, and always thrilling to watch.",
+  description: "Found this guy flipped on his back in the sand. Flipped him over and got him to crawl up onto some rock. Hopefully he was able to take back off!",
   img: "../photos/mexicanfreetailed.png"
 },
 
 "Black-billed Cuckoo": {
   scientific: "Coccyzus erythropthalmus",
-  description: "A quiet and elusive species. Caught this one during a late-summer migration stopover in Green Bay.",
+  description: "My first Cuckoo sighting! Caught this one at Fonferek's Glen near Green Bay, WI.",
   img: "../photos/cuckoo.png"
 },
 
 "Acorn Woodpecker": {
   scientific: "Melanerpes formicivorus",
-  description: "A charismatic bird from the Southwest. Found near a granary tree with a whole colony chattering nearby.",
+  description: "Caught one of these amazing woodpeckers on my trip to Arizona. Definitely one of my favorites!",
   img: "../photos/acornwoodpecker.png"
 },
 
 "Elegant Trogon": {
   scientific: "Trogon elegans",
-  description: "One of the most sought-after birds in Arizona. Spotted deep in a riparian canyon at sunrise.",
+  description: "Saw this Trogan at Sabine Canyon outside of Tuscon. Highly recommended spot for birders if you are in AZ!",
   img: "../photos/trojon.png"
 },
 
 "Cliff Swallow": {
   scientific: "Petrochelidon pyrrhonota",
-  description: "Hundreds swirling above the riverfront. These tight–packed aerial insectivores always put on a show.",
+  description: "Always fun to see these rare visitors building nests over at Lincoln Park Zoo. Check underneath the bridge at Nature Boardwalk during summer to find these guys!",
   img: "../photos/cliffswallows.png"
 },
 
 "Mandarin Duck": {
   scientific: "Aix galericulata",
-  description: "A stunning, ornamental species spotted in Berlin. Even more vibrant in person than any photo suggests.",
+  description: "Saw this guy floating down a river in Berlin. Spectactular colors, remind me of the Wood Duck in America.",
   img: "../photos/mandarinduck.png"
 },
 
 "Eurasian Hoopoe": {
   scientific: "Upupa epops",
-  description: "A dream bird with an unmistakable crest. Found probing the ground for insects near a park in Barcelona.",
+  description: "Super cool bird with an awesome hairstyle. Found probing the ground for insects near a park in Barcelona.",
   img: "../photos/hoopoe.png"
 },
 
