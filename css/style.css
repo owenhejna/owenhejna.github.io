@@ -383,61 +383,6 @@ section img {
     height: 50px;
     display: block;
 }
-.lino-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-/* Wrapper controls carousel size */
-.lino-slide-wrapper {
-    width: 250px;       /* set the carousel width */
-    height: 150px;      /* set the carousel height */
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-}
-
-/* Each slide fills wrapper, scaled proportionally */
-.lino-slide {
-    position: absolute;         /* stack on top of each other */
-    top: 0;
-    left: 0;
-    width: 100%;                /* fill wrapper */
-    height: 100%;               /* fill wrapper */
-    object-fit: contain;        /* keep aspect ratio */
-    display: none;              /* hidden by default */
-}
-
-/* Show the active slide */
-.lino-slide.active {
-    display: block !important;
-}
-
-
-
-
-.lino-prev,
-.lino-next {
-    background: #656D4A;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.6rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 6px;
-    transition: background 0.2s;
-    height: 40px;
-    align-self: center;
-}
-
-.lino-prev:hover,
-.lino-next:hover {
-    background: #312E26;
-}
-
 
 
 

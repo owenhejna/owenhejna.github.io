@@ -112,7 +112,51 @@ const sightingData = {
     scientific: "Dryocopus pileatus",
     description: "My first pileated sighting since I was a young boy. Saw this guy drumming away at an fallen tree. Lots of good bugs for sure!",
     img: "../photos/pilleated.png"
-  }
+  },
+
+  "Mexican Free-tailed Bat": {
+  scientific: "Tadarida brasiliensis",
+  description: "Observed in Tulum during their evening foraging flights. Fast, agile, and always thrilling to watch.",
+  img: "../photos/mexicanfreetailed.png"
+},
+
+"Black-billed Cuckoo": {
+  scientific: "Coccyzus erythropthalmus",
+  description: "A quiet and elusive species. Caught this one during a late-summer migration stopover in Green Bay.",
+  img: "../photos/cuckoo.png"
+},
+
+"Acorn Woodpecker": {
+  scientific: "Melanerpes formicivorus",
+  description: "A charismatic bird from the Southwest. Found near a granary tree with a whole colony chattering nearby.",
+  img: "../photos/acornwoodpecker.png"
+},
+
+"Elegant Trogon": {
+  scientific: "Trogon elegans",
+  description: "One of the most sought-after birds in Arizona. Spotted deep in a riparian canyon at sunrise.",
+  img: "../photos/trojon.png"
+},
+
+"Cliff Swallow": {
+  scientific: "Petrochelidon pyrrhonota",
+  description: "Hundreds swirling above the riverfront. These tight–packed aerial insectivores always put on a show.",
+  img: "../photos/cliffswallows.png"
+},
+
+"Mandarin Duck": {
+  scientific: "Aix galericulata",
+  description: "A stunning, ornamental species spotted in Berlin. Even more vibrant in person than any photo suggests.",
+  img: "../photos/mandarinduck.png"
+},
+
+"Eurasian Hoopoe": {
+  scientific: "Upupa epops",
+  description: "A dream bird with an unmistakable crest. Found probing the ground for insects near a park in Barcelona.",
+  img: "../photos/hoopoe.png"
+},
+
+
 };
 
 // Open modal on card click
