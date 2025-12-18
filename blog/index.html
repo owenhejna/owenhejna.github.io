@@ -139,6 +139,117 @@
             height: 50px;
             display: block;
         }
+        /* ====== Pixel Bird Decoration ====== */
+.pixel-bird {
+  position: fixed;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Left side birds - facing right */
+.bird-left-1 {
+  left: 0;
+  top: 200px;
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.bird-left-2 {
+  left: 0;
+  top: 550px;
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+/* Right side birds - facing left */
+.bird-right-1 {
+  right: 0;
+  top: 325px;
+  width: 50px;
+  height: auto;
+}
+
+.bird-right-2 {
+  right: 0;
+  top: 540px;
+  width: 50px;
+  height: auto;
+}
+
+/* ====== Header Bottom Birds ====== */
+header {
+  position: relative;
+}
+
+.header-bird {
+  position: absolute;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  bottom: 0px; /* Adjust to sit on the line */
+}
+
+.header-bird-left-1 {
+  left: 310px;
+  transform: scaleX(-1);
+}
+
+.header-bird-left-2 {
+  left: 250px;
+  transform: scaleX(-1);
+}
+
+.header-bird-left-3 {
+  left: 190px;
+  transform: scaleX(-1);
+}
+
+.header-bird-left-4 {
+  left: 110px;
+  transform: scaleX(-1);
+}
+
+.header-bird-left-5 {
+  left: 70px;
+  transform: scaleX(-1);
+}
+
+.header-bird-right-1 {
+  right: 310px;
+}
+
+.header-bird-right-2 {
+  right: 250px;
+}
+
+.header-bird-right-3 {
+  right: 190px;
+}
+
+.header-bird-right-4 {
+  right: 110px;
+}
+
+.header-bird-right-5 {
+  right: 70px;
+}
+
+/* Hide birds on mobile */
+@media (max-width: 768px) {
+  .pixel-bird,
+  .header-bird,
+  .footer-bird {
+    display: none;
+  }
+}
     </style>
 </head>
 <script src="../js/blog.js"></script>
@@ -147,6 +258,18 @@
     <header>
         <h1>Blog</h1>
         <nav>
+                          <!-- Header Bottom Birds -->
+  <img src="../photos/chickadee.png" alt="" class="header-bird header-bird-left-1">
+  <img src="../photos/bluebird.png" alt="" class="header-bird header-bird-right-1">
+    <img src="../photos/bluejay.png" alt="" class="header-bird header-bird-left-2">
+  <img src="../photos/oriole.png" alt="" class="header-bird header-bird-right-2">
+    <img src="../photos/waxwing.png" alt="" class="header-bird header-bird-left-3">
+  <img src="../photos/americanrobin.png" alt="" class="header-bird header-bird-right-3">
+    <img src="../photos/cardinal.png" alt="" class="header-bird header-bird-left-4">
+  <img src="../photos/tuftedtitmouse.png" alt="" class="header-bird header-bird-right-4">
+    <img src="../photos/redwingblackbird.png" alt="" class="header-bird header-bird-left-5">
+  <img src="../photos/rosebreastedgrosbeak.png" alt="" class="header-bird header-bird-right-5">
+
             <a href="../index.html">Home</a>
             <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             <a href="index.html">Blog</a>
