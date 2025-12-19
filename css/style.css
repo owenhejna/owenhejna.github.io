@@ -168,11 +168,20 @@ section img {
   }
   
   .about-me,
+  .research-interests
   .ri-subsection-container,
   .eo-container {
     text-align: center;
   }
+  /* Add this new rule */
+  .research-interests h2,
+  .research-interests > p {
+    clear: both;
+    text-align: center;
+  }
 }
+
+
 
 /* ====== Sightings Page ====== */
 .wildlife-container {
@@ -347,13 +356,13 @@ section img {
 
 .sightings-intro {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: -2rem auto 1rem auto; /* top, left/right auto, bottom */
   padding: 1rem 1.5rem;
   text-align: center;
   background: #BCB88A;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 
 .sightings-intro h2 {
   margin-bottom: 0.5rem;
@@ -434,7 +443,7 @@ section img {
 
 /* Left side birds - facing right */
 .bird-left-1 {
-  left: 0;
+  left: -4px;
   top: 200px;
   width: 50px;
   height: auto;
@@ -442,8 +451,16 @@ section img {
 }
 
 .bird-left-2 {
-  left: 0;
-  top: 550px;  /* 350px gap from left-1 */
+  left: -4px;
+  top: 400px;  /* 350px gap from left-1 */
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.bird-left-3 {
+  left: -4px;
+  top: 600px;  /* 215px gap from right-1 */
   width: 50px;
   height: auto;
   transform: scaleX(-1);
@@ -451,21 +468,28 @@ section img {
 
 /* Right side birds - facing left */
 .bird-right-1 {
-  right: 0;
-  top: 300px;
+  right: -4px;
+  top: 200px;
   width: 50px;
   height: auto;
 }
 
 .bird-right-2 {
-  right: 0;
-  top: 590px;  /* 215px gap from right-1 */
+  right: -4px;
+  top: 600px;  /* 215px gap from right-1 */
+  width: 50px;
+  height: auto;
+}
+
+.bird-right-3 {
+  right: -4px;
+  top: 400px;  /* 215px gap from right-1 */
   width: 50px;
   height: auto;
 }
 
 /* Hide on mobile */
-@media (max-width: 768px) {
+@media (max-width: 978px) {
   .pixel-bird {
     display: none;
   }
