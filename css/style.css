@@ -452,14 +452,14 @@ section img {
 /* Right side birds - facing left */
 .bird-right-1 {
   right: 0;
-  top: 325px;
+  top: 300px;
   width: 50px;
   height: auto;
 }
 
 .bird-right-2 {
   right: 0;
-  top: 540px;  /* 215px gap from right-1 */
+  top: 590px;  /* 215px gap from right-1 */
   width: 50px;
   height: auto;
 }
