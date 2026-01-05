@@ -249,15 +249,18 @@
             right: 165px;
         }
 
-        /* Hide birds on mobile */
-        @media (max-width: 300px) {
-            .pixel-bird,
-            .box-bird {
-                display: none;
-            }
-        }
+/* Hide overlapping birds on mobile */
+@media (max-width: 600px) {
+    .box-bird-left-5,   /* red-winged blackbird */
+    .box-bird-right-5  /* rose-breasted grosbeak */
+    {
+        display: none;
+    }
+}
+
     </style>
 </head>
+<link rel="icon" type="image/png" href="/photos/chickadee.png">
 <script src="../js/blog.js"></script>
 
 <body>
