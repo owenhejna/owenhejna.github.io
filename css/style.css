@@ -8,11 +8,17 @@ body {
 }
 
 /* ====== Header styling ====== */
+/* Replace the existing header styling section with this: */
+
+/* ====== Header styling ====== */
 header {
   background-color: #656D4A;
   color: #1b1b1b;
   padding: .75rem 0;
   text-align: center;
+  margin: 15px; /* Creates gap around header */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
 header h1 {
@@ -29,6 +35,10 @@ header nav a {
   margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
 }
 
 header nav a:hover {
