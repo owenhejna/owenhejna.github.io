@@ -1,0 +1,109 @@
+/* ====== Pixel Bird Decoration ====== */
+.pixel-bird {
+  position: fixed;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Left side birds - facing right */
+.bird-left-1 {
+  left: -4px;
+  top: 200px;
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.bird-left-2 {
+  left: -4px;
+  top: 400px;
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.bird-left-3 {
+  left: -4px;
+  top: 600px;
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+/* Right side birds - facing left */
+.bird-right-1 {
+  right: -4px;
+  top: 200px;
+  width: 50px;
+  height: auto;
+}
+
+.bird-right-2 {
+  right: -4px;
+  top: 600px;
+  width: 50px;
+  height: auto;
+}
+
+.bird-right-3 {
+  right: -4px;
+  top: 400px;
+  width: 50px;
+  height: auto;
+}
+
+/* Hide pixel birds on mobile */
+@media (max-width: 978px) {
+  .pixel-bird {
+    display: none;
+  }
+}
+
+/* ====== Modal Styling ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.modal-content img.zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}

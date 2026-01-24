@@ -1,396 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="/assets/images/chickadee.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            margin: 0;
-            font-family: 'Geom', 'Poppins';
-            line-height: 1.6;
-            background-color: #BCB88A;
-            color: #312E26;
-        }
-        
-/* Replace the header section in your blog page's <style> tag with this: */
-
-header {
-    background-color: #656D4A;
-    color: #1b1b1b;
-    padding: .75rem 0;
-    text-align: center;
-    margin: 15px; /* Creates gap around header */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-}
-
-header nav {
-    margin-top: 0.5rem;
-}
-
-header nav a {
-    color: #1b1b1b;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-        
-        main {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-        
-        .blog-intro {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-intro h2 {
-            font-size: 1.8rem;
-            margin-bottom: .1rem;
-        }
-        
-        .blog-list-container {
-            position: relative;
-            margin-top: 50px;
-        }
-        
-        .blog-list {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .blog-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .blog-item:last-child {
-            border-bottom: none;
-        }
-        
-        .blog-item h3 {
-            color: #656D4A;
-            font-size: 1.4rem;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        
-        .blog-item h3:hover {
-            color: #312E26;
-            text-decoration: underline;
-        }
-        
-        .post-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.3rem;
-            font-style: italic;
-        }
-        
-        .post-content {
-            display: none;
-            margin-top: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .post-content.show {
-            display: block;
-        }
-        
-        .post-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .post-content a {
-            color: #656D4A;
-            font-weight: bold;
-        }
-        
-        .post-content a:hover {
-            text-decoration: underline;
-        }
-        
-        .site-footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        .footer-icons {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-icons a img,
-        .footer-icons a svg {
-            width: 50px;
-            height: 50px;
-            display: block;
-        }
-        
-        /* ====== Pixel Bird Decoration ====== */
-        .pixel-bird {
-            position: fixed;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-            z-index: 100;
-            pointer-events: none;
-        }
-
-        /* Left side birds - facing right */
-        .bird-left-1 {
-            left: 0;
-            top: 200px;
-            width: 50px;
-            height: auto;
-            transform: scaleX(-1);
-        }
-
-        .bird-left-2 {
-            left: 0;
-            top: 550px;
-            width: 50px;
-            height: auto;
-            transform: scaleX(-1);
-        }
-
-        /* Right side birds - facing left */
-        .bird-right-1 {
-            right: 0;
-            top: 325px;
-            width: 50px;
-            height: auto;
-        }
-
-        .bird-right-2 {
-            right: 0;
-            top: 540px;
-            width: 50px;
-            height: auto;
-        }
-
-        /* ====== Blog Box Top Birds ====== */
-        .box-bird {
-            position: absolute;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-            pointer-events: none;
-            width: 40px;
-            height: auto;
-            top: -36px;
-            z-index: 10;
-        }
-
-        .box-bird-left-1 {
-            left: 5px;
-            transform: scaleX(-1);
-            top: -34px;
-        }
-
-        .box-bird-left-2 {
-            left: 45px;
-            transform: scaleX(-1);
-            top: -41px;
-        }
-
-        .box-bird-left-3 {
-            left: 85px;
-            transform: scaleX(-1);
-            top: -36px;
-        }
-
-        .box-bird-left-4 {
-            left: 125px;
-            transform: scaleX(-1);
-        }
-
-        .box-bird-left-5 {
-            left: 165px;
-            transform: scaleX(-1);
-        }
-
-        .box-bird-right-1 {
-            right: 5px;
-        }
-
-        .box-bird-right-2 {
-            right: 45px;
-        }
-
-        .box-bird-right-3 {
-            right: 85px;
-        }
-
-        .box-bird-right-4 {
-            right: 125px;
-            top: -38px;
-        }
-
-        .box-bird-right-5 {
-            right: 165px;
-        }
-
-/* Hide overlapping birds on mobile */
-@media (max-width: 600px) {
-    .box-bird-left-5,   /* red-winged blackbird */
-    .box-bird-right-5  /* rose-breasted grosbeak */
-    {
-        display: none;
-    }
-}
-
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/base.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/blog.css">
 </head>
-<link rel="icon" type="image/png" href="/photos/chickadee.png">
-<script src="../js/blog.js"></script>
 
 <body>
-    <header>
-        <h1>Blog</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-            <a href="index.html">Blog</a>
-            <a href="../art/index.html">Art</a>
-            <a href="../wildlife/index.html">Sightings</a>
-        </nav>
-    </header>
-    
-    <main>
+<header>
+    <h1>Blog</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="index.html">Blog</a>
+        <a href="../art/index.html">Art</a>
+        <a href="../wildlife/index.html">Sightings</a>
+    </nav>
+</header>
 
-<section class="blog-intro">
-    <h2>Welcome to my blog!</h2>
-    <p>Check back for updates on my science and whatever else I'm up to.
-    </p>
-</section>
+<main>
 
-<div class="blog-list-container">
-    <!-- Birds sitting on top of the blog box -->
-    <img src="../photos/chickadee.png" alt="" class="box-bird box-bird-left-1">
-    <img src="../photos/bluejay.png" alt="" class="box-bird box-bird-left-2">
-    <img src="../photos/waxwing.png" alt="" class="box-bird box-bird-left-3">
-    <img src="../photos/cardinal.png" alt="" class="box-bird box-bird-left-4">
-    <img src="../photos/redwingblackbird.png" alt="" class="box-bird box-bird-left-5">
-    
-    <img src="../photos/bluebird.png" alt="" class="box-bird box-bird-right-1">
-    <img src="../photos/oriole.png" alt="" class="box-bird box-bird-right-2">
-    <img src="../photos/americanrobin.png" alt="" class="box-bird box-bird-right-3">
-    <img src="../photos/tuftedtitmouse.png" alt="" class="box-bird box-bird-right-4">
-    <img src="../photos/rosebreastedgrosbeak.png" alt="" class="box-bird box-bird-right-5">
-    
-    <div class="blog-list">
+    <section class="blog-intro">
+        <h2>Welcome to my blog!</h2>
+        <p>Check back for updates on my science and whatever else I'm up to.
+        </p>
+    </section>
 
-        <!-- Marshbird coordinator post-->
-          <article class="blog-item">
-            <h3>Accepted a contract with the Indiana Audubon</h3>
-            <div class="post-meta">December 30, 2025</div>
-            <div class="post-content" id="post1">
-                <p>I am beyond excited to share that starting in February, I will be working as Indiana Audubon’s Secretive Marsh Bird Coordinator. In this role I will manage a community science project focused on monitoring reclusive marsh birds in the Indiana-Illinois Calumet region. Furthermore, this will be my first role serving as an independent contractor, a new and exciting experience for me. Time to start saving receipts!</p>
-                <p>Aside from my proclivity for both birds and the Calumet region, the Secretive Marsh Bird project excites me as it is comprised of two of my niche research interests, acoustic monitoring and community science. This project challenges citizen scientists to monitor marsh birds (which often can’t be seen amongst the marsh vegetation) by using audio playbacks to elicit response calls from the birds. The volunteers then record which species respond to the audio and move to the next point. </p>
-                <p>If you wish to learn more about the project, check out the project <a href="https://greatlakesbirds-audubon.hub.arcgis.com/" target="_blank">data hub</a> and <a href="https://gl.audubon.org/news/monitoring-secretive-marsh-birds-great-lakes-region" target="_blank">article</a>. I can’t wait to collaborate with the folks at Indiana Audubon, do some cool science, and catch some lifers along the way!</p>
-            </div>
-        </article>
+    <div class="blog-list-container">
+        <!-- Birds sitting on top of the blog box -->
+        <img src="../assets/images/chickadee.webp" alt="" class="box-bird box-bird-left-1">
+        <img src="../assets/images/bluejay.webp" alt="" class="box-bird box-bird-left-2">
+        <img src="../assets/images/waxwing.webp" alt="" class="box-bird box-bird-left-3">
+        <img src="../assets/images/cardinal.webp" alt="" class="box-bird box-bird-left-4">
+        <img src="../assets/images/redwingblackbird.webp" alt="" class="box-bird box-bird-left-5">
 
-        <!-- Blog Post 1 -->
-        <article class="blog-item">
-            <h3>Reflecting on the Bat Tracker season</h3>
-            <div class="post-meta">December 11, 2025</div>
-            <div class="post-content" id="post2">
-                <p>As my time with the Urban Wildlife Institute and as Community Science Coordinator comes to a close, I think of all the amazing shared memories that the bat tracker community and I made together. Whether it be in person or over email, I was constantly impressed by this community's dedication and passion to contribute to urban wildlife research. While I have worked with volunteer cohorts in the past, no group has felt as interconnected or as driven as Bat Tracker. I thank each and every bat tracker volunteer for their contributions to the program. </p>
-                <p>Beyond my experience with the bat tracker community, the Urban Wildlife Institute has been extremely welcoming and supportive of my interestes and career goals. While it is sad to leave such a great group of scientists, I will always think the folks at UWI as friends and look forward to future collaborations with them.</p>
-            </div>
-        </article>
+        <img src="../assets/images/bluebird.webp" alt="" class="box-bird box-bird-right-1">
+        <img src="../assets/images/oriole.webp" alt="" class="box-bird box-bird-right-2">
+        <img src="../assets/images/americanrobin.webp" alt="" class="box-bird box-bird-right-3">
+        <img src="../assets/images/tuftedtitmouse.webp" alt="" class="box-bird box-bird-right-4">
+        <img src="../assets/images/rosebreastedgrosbeak.webp" alt="" class="box-bird box-bird-right-5">
 
-        <!-- Blog Post 2 -->
-        <article class="blog-item">
-            <h3>A new hobby: linocutting</h3>
-            <div class="post-meta">November 4, 2025</div>
-            <div class="post-content" id="post3">
-                <p>Historically I have not always been praised for my artistic talent or creativity. Therefore, in attempts to find a new winter hobby and become a bit more artsy, I have taken up lino cutting. Also known as lino printing, this art style requires carving into a surface to reveal an image and dates back to 2nd century Asia where artists would carve into wooden blocks and print them as textiles. A famous example of this is Hokusai's Great Wave off Kanagawa, probably the most famous example of this style. While many folks still carve into wooden blocks, most printing is done using rubber-like matted surface called linoleum. Thus the term linocutting. </p>
-                <p>My interest in linocutting has mostly centered around making prints of various birds. As of now, I have done several species including a Loon, Brown Creeper, Northern Cardinal (for Christmas of course), and a Ferruginous Pygmy Owl. I hope to one day expand my skills into landscapes and other types of wildlife.</p>
-                <figure style="text-align:center; margin:1rem 0;">
-        <img src="../photos/linocuts/pygmyowl.PNG" alt="Linocut print" style="width:300px; display:block; margin:0 auto;">
-        <figcaption style="font-size:0.9rem; color:#656D4A; font-style:italic; margin-top:0.5rem;">
-            Ferruginous Pygmy Owl
-        </figcaption>
-    </figure>
-            </div>
-        </article>
+        <div class="blog-list">
 
-        <!-- Blog Post 3 -->
-        <article class="blog-item">
-            <h3>My first interview with a journalist</h3>
-            <div class="post-meta">October 15, 2025</div>
-            <div class="post-content" id="post4">
-                <p>I'm super excited to share that a scientific article has been published in Planet Forward surrounding me and my work! It is awesome to see the Bat Tracker project (and our amazing volunteers) getting some recognition.</p>
-                <p>Check it out <a href="https://planetforward.org/story/bat-tracker/" target="_blank">here</a>!</p>
-            </div>
-        </article>
+            <!-- Marshbird coordinator post-->
+            <article class="blog-item">
+                <h3>Accepted a contract with the Indiana Audubon</h3>
+                <div class="post-meta">December 30, 2025</div>
+                <div class="post-content" id="post1">
+                    <p>I am beyond excited to share that starting in February, I will be working as Indiana Audubon's Secretive Marsh Bird Coordinator. In this role I will manage a community science project focused on monitoring reclusive marsh birds in the Indiana-Illinois Calumet region. Furthermore, this will be my first role serving as an independent contractor, a new and exciting experience for me. Time to start saving receipts!</p>
+                    <p>Aside from my proclivity for both birds and the Calumet region, the Secretive Marsh Bird project excites me as it is comprised of two of my niche research interests, acoustic monitoring and community science. This project challenges citizen scientists to monitor marsh birds (which often can't be seen amongst the marsh vegetation) by using audio playbacks to elicit response calls from the birds. The volunteers then record which species respond to the audio and move to the next point. </p>
+                    <p>If you wish to learn more about the project, check out the project
+                        <a href="https://greatlakesbirds-audubon.hub.arcgis.com/" target="_blank">data hub</a> and
+                        <a href="https://gl.audubon.org/news/monitoring-secretive-marsh-birds-great-lakes-region" target="_blank">article</a>. I can't wait to collaborate with the folks at Indiana Audubon, do some cool science, and catch some lifers along the way!
+                    </p>
+                </div>
+            </article>
 
-    <!-- Blog Post 4 -->
-    <article class="blog-item">
-        <h3>Starting a new role with the Urban Wildlife Institute</h3>
-        <div class="post-meta">April 8, 2025</div>
-        <div class="post-content" id="post5">
-            <p>After a long winter of many applications and interviews, I am thrilled to share that I've been welcomed back to the Urban Wildlife Institute (UWI) as a Community Science Coordinator! This is an incredible position focused on engaging Chicagoland volunteers through UWI's BatTracker Community Science Program. I am truly honored to have been selected to contribute to this inspiring project.</p>
+            <!-- Blog Post 1 -->
+            <article class="blog-item">
+                <h3>Reflecting on the Bat Tracker season</h3>
+                <div class="post-meta">December 11, 2025</div>
+                <div class="post-content" id="post2">
+                    <p>As my time with the Urban Wildlife Institute and as Community Science Coordinator comes to a close, I think of all the amazing shared memories that the bat tracker community and I made together. Whether it be in person or over email, I was constantly impressed by this community's dedication and passion to contribute to urban wildlife research. While I have worked with volunteer cohorts in the past, no group has felt as interconnected or as driven as Bat Tracker. I thank each and every bat tracker volunteer for their contributions to the program. </p>
+                    <p>Beyond my experience with the bat tracker community, the Urban Wildlife Institute has been extremely welcoming and supportive of my interestes and career goals. While it is sad to leave such a great group of scientists, I will always think the folks at UWI as friends and look forward to future collaborations with them.</p>
+                </div>
+            </article>
 
-            <p>Beyond the obvious intrigue of urban bat research, this position represents a sense of community that UWI strongly cultivates within its own team and with its volunteers. The ecologists at UWI showcase some of the best this field has to offer, and I am thrilled to join the team under a more full-time role.</p>
+            <!-- Blog Post 2 -->
+            <article class="blog-item">
+                <h3>A new hobby: linocutting</h3>
+                <div class="post-meta">November 4, 2025</div>
+                <div class="post-content" id="post3">
+                    <p>Historically I have not always been praised for my artistic talent or creativity. Therefore, in attempts to find a new winter hobby and become a bit more artsy, I have taken up lino cutting. Also known as lino printing, this art style requires carving into a surface to reveal an image and dates back to 2nd century Asia where artists would carve into wooden blocks and print them as textiles. A famous example of this is Hokusai's Great Wave off Kanagawa, probably the most famous example of this style. While many folks still carve into wooden blocks, most printing is done using rubber-like matted surface called linoleum. Thus the term linocutting. </p>
+                    <p>My interest in linocutting has mostly centered around making prints of various birds. As of now, I have done several species including a Loon, Brown Creeper, Northern Cardinal (for Christmas of course), and a Ferruginous Pygmy Owl. I hope to one day expand my skills into landscapes and other types of wildlife.</p>
+                    <figure class="post-figure">
+                        <img src="../assets/images/art/linocuts/pygmyowl.webp" alt="Linocut print">
+                        <figcaption>Ferruginous Pygmy Owl</figcaption>
+                    </figure>
+                </div>
+            </article>
 
-            <p>On a separate note, I'd like to thank the wonderful support I've received through this journey. Although job searching in this field is no-doubt arduous, the resounding amount of support and advice I've received from senior ecologists along the way was nothing short of heartwarming. Over the past months, I have had the opportunity to speak and interview with some incredible ecologists who have cemented my faith in this scientific community. Beyond this, I am lucky enough to have a couple incredible women in my life that supported me through just under a hundred denials. A huge thank you to my extremely supportive partner and my inspirational and hardworking mother.</p>
+            <!-- Blog Post 3 -->
+            <article class="blog-item">
+                <h3>My first interview with a journalist</h3>
+                <div class="post-meta">October 15, 2025</div>
+                <div class="post-content" id="post4">
+                    <p>I'm super excited to share that a scientific article has been published in Planet Forward surrounding me and my work! It is awesome to see the Bat Tracker project (and our amazing volunteers) getting some recognition.</p>
+                    <p>Check it out <a href="https://planetforward.org/story/bat-tracker/" target="_blank">here</a>!</p>
+                </div>
+            </article>
 
-            <p>In conclusion, this is a huge and exciting step for me in my career. I am extremely proud to be fulfilling my dreams and aspirations in conservation biology under such an amazing organization. Thank you to all who have helped me thus far and stay tuned!</p>
+            <!-- Blog Post 4 -->
+            <article class="blog-item">
+                <h3>Starting a new role with the Urban Wildlife Institute</h3>
+                <div class="post-meta">April 8, 2025</div>
+                <div class="post-content" id="post5">
+                    <p>After a long winter of many applications and interviews, I am thrilled to share that I've been welcomed back to the Urban Wildlife Institute (UWI) as a Community Science Coordinator! This is an incredible position focused on engaging Chicagoland volunteers through UWI's BatTracker Community Science Program. I am truly honored to have been selected to contribute to this inspiring project.</p>
+
+                    <p>Beyond the obvious intrigue of urban bat research, this position represents a sense of community that UWI strongly cultivates within its own team and with its volunteers. The ecologists at UWI showcase some of the best this field has to offer, and I am thrilled to join the team under a more full-time role.</p>
+
+                    <p>On a separate note, I'd like to thank the wonderful support I've received through this journey. Although job searching in this field is no-doubt arduous, the resounding amount of support and advice I've received from senior ecologists along the way was nothing short of heartwarming. Over the past months, I have had the opportunity to speak and interview with some incredible ecologists who have cemented my faith in this scientific community. Beyond this, I am lucky enough to have a couple incredible women in my life that supported me through just under a hundred denials. A huge thank you to my extremely supportive partner and my inspirational and hardworking mother.</p>
+
+                    <p>In conclusion, this is a huge and exciting step for me in my career. I am extremely proud to be fulfilling my dreams and aspirations in conservation biology under such an amazing organization. Thank you to all who have helped me thus far and stay tuned!</p>
+                </div>
+            </article>
+
         </div>
-    </article>
-
     </div>
-</div>
 
 </main>
 <footer class="site-footer">
-  <div class="footer-icons">
-    <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
-      <img src="../photos/linkedin.png" alt="LinkedIn" width="30" height="30">
-    </a>
+    <div class="footer-icons">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
+            <img src="../assets/images/linkedin.webp" alt="LinkedIn" width="30" height="30">
+        </a>
 
-    <!-- GitHub -->
-    <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
-        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
-      </svg>
-    </a>
+        <!-- GitHub -->
+        <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
+                <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+            </svg>
+        </a>
 
-    <!-- Email -->
-    <a href="mailto:ohejna@outlook.com" aria-label="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
-        <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
-      </svg>
-    </a>
-  </div>
+        <!-- Email -->
+        <a href="mailto:ohejna@outlook.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
+                <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
+            </svg>
+        </a>
+    </div>
 </footer>
+
+<script src="../src/js/blog.js"></script>
 </body>
 </html>

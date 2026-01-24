@@ -1,0 +1,111 @@
+/* ====== Home Page Styles ====== */
+
+/* ====== About Me Section ====== */
+.about-me {
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+.about-me h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.about-image {
+  float: right;
+  width: 280px;
+  max-width: 35%;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ====== Research Interests Section ====== */
+.research-interests > p {
+  margin-bottom: 2rem;
+}
+
+.ri-subsection-container {
+  margin-bottom: 2.5rem;
+  overflow: auto;
+}
+
+.ri-text h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.ri-image {
+  float: right;
+  width: 350px;
+  max-width: 40%;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ri-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ====== Education & Outreach Section ====== */
+.eo-container {
+  overflow: auto;
+}
+
+.eo-text h2 {
+  margin-top: 0;
+}
+
+.eo-image {
+  float: right;
+  width: 350px;
+  max-width: 40%;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.eo-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ====== Content Links ====== */
+.content-link {
+  color: #656D4A;
+}
+
+/* ====== Mobile Responsiveness ====== */
+@media (max-width: 768px) {
+  .about-image,
+  .ri-image,
+  .eo-image {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-me,
+  .ri-subsection-container,
+  .eo-container {
+    text-align: center;
+  }
+
+  .research-interests h2,
+  .research-interests > p {
+    clear: both;
+    text-align: center;
+  }
+}

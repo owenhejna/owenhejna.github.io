@@ -1,127 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/photos/chickadee.png">
+    <link rel="icon" type="image/png" href="/assets/images/chickadee.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owen Hejna</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/home.css">
 </head>
 <body>
 
-   <!-- Pixel Art Birds -->
-  <img src="photos/redbellied.png" alt="" class="pixel-bird bird-left-1">
-  <img src="photos/downy.png" alt="" class="pixel-bird bird-right-1">
-  <img src="photos/whitebnuthatch.png" alt="" class="pixel-bird bird-left-2"> 
-  <img src="photos/redhead.png" alt="" class="pixel-bird bird-right-2"> 
-  <img src="photos/redbreastednuthatch.png" alt="" class="pixel-bird bird-right-3">
-   <img src="photos/flicker.png" alt="" class="pixel-bird bird-left-3">
+<!-- Pixel Art Birds -->
+<img src="assets/images/redbellied.webp" alt="" class="pixel-bird bird-left-1">
+<img src="assets/images/downy.webp" alt="" class="pixel-bird bird-right-1">
+<img src="assets/images/whitebnuthatch.webp" alt="" class="pixel-bird bird-left-2">
+<img src="assets/images/redhead.webp" alt="" class="pixel-bird bird-right-2">
+<img src="assets/images/redbreastednuthatch.webp" alt="" class="pixel-bird bird-right-3">
+<img src="assets/images/flicker.webp" alt="" class="pixel-bird bird-left-3">
 
 
-    <header>
-        <h1>Owen Hejna</h1>
-        <nav>
+<header>
+    <h1>Owen Hejna</h1>
+    <nav>
 
-            <a href="index.html">Home</a>
-            <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-            <a href="blog/index.html">Blog</a>
-            <a href="art/index.html">Art</a>
-            <a href="wildlife/index.html">Sightings</a>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- About Me Section -->
-        <section class="about-me">
-            <div class="about-image">
-                <img src="photos/field_OLPO.jpg" alt="me setting up acoustic bat monitoring equipment for UWI">
-                <p class="image-caption">Field work on the Old Post Office green rooftop</p>
+        <a href="index.html">Home</a>
+        <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="art/index.html">Art</a>
+        <a href="wildlife/index.html">Sightings</a>
+    </nav>
+</header>
+
+<main>
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-image">
+            <img src="assets/images/field_OLPO.webp" alt="me setting up acoustic bat monitoring equipment for UWI">
+            <p class="image-caption">Field work on the Old Post Office green rooftop</p>
+        </div>
+        <h2>About Me</h2>
+        <p>Welcome to my website! I'm an ecologist based in Chicago focused on using acoustic monitoring, spatial ecology, and community science to better understand wildlife relationships in urban ecosystems. While the majority of my research surrounds acoustic monitoring of birds and bats, I am always interested in collaborating on novel projects. Feel free to get in contact via the links at the bottom of the page!</p>
+        <p>Beyond just my scientific work, I'm an educator and naturalist with a strong passion for outreach. In my spare time I enjoy birding, working in my garden, and hiking. Check out the blog and sightings tabs to learn more about what I get up to outside of science!</p>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section class="research-interests">
+        <h2>Research Interests</h2>
+        <p>My research is focused on better understanding wildlife in urban ecosystems through passive acoustic monitoring and community science. While most of my current experience lies in bat and bird acoustic monitoring, I am interested in expanding my research into other passive monitoring systems. I am also driven by my love for community science and cherish nothing more than connecting new folks to their local wildlife through research. Below are three main themes that guide my work!</p>
+
+        <!-- Acoustic Monitoring Subsection -->
+        <div class="ri-subsection-container">
+            <div class="ri-image">
+                <img loading="lazy" src="assets/images/acousticmonitoring.webp" alt="Acoustic monitoring fieldwork">
+                <p class="image-caption">Setting up acoustic equipment at Northerly Island</p>
             </div>
-            <h2>About Me</h2>
-            <p>Welcome to my website! I'm an ecologist based in Chicago focused on using acoustic monitoring, spatial ecology, and community science to better understand wildlife relationships in urban ecosystems. While the majority of my research surrounds acoustic monitoring of birds and bats, I am always interested in collaborating on novel projects. Feel free to get in contact via the links at the bottom of the page!</p>
-            <p>Beyond just my scientific work, I'm an educator and naturalist with a strong passion for outreach. In my spare time I enjoy birding, working in my garden, and hiking. Check out the blog and sightings tabs to learn more about what I get up to outside of science!</p>
-        </section>
+            <h3>Acoustic Monitoring</h3>
+            <p>While wildlife monitoring is undoubtedly crucial for the conservation and understanding of endangered species, some monitoring methods can be invasive, creating challenges for both ecologists and wildlife. Passive acoustic monitoring minimizes such concerns. Furthermore, autonomous recording allows ecologists to survey species composition in remote locations and over relatively long periods of time.</p>
+            <p>I use autonomous recording units (ARUs) to study aerial wildlife including bats and birds. To do this I use field-collected data, call vetting techniques, and acoustic data processing programs such as Sonobat and Cornell's BirdNet to tell stories about how urban wildlife interacts with the cities we live in.</p>
+        </div>
 
-        <!-- Research Interests Section -->
-        <section class="research-interests">
-            <h2>Research Interests</h2>
-            <p>My research is focused on better understanding wildlife in urban ecosystems through passive acoustic monitoring and community science. While most of my current experience lies in bat and bird acoustic monitoring, I am interested in expanding my research into other passive monitoring systems. I am also driven by my love for community science and cherish nothing more than connecting new folks to their local wildlife through research. Below are three main themes that guide my work!</p>
-            
-            <!-- Acoustic Monitoring Subsection -->
-            <div class="ri-subsection-container">
-                <div class="ri-image">
-                    <img src="photos/acousticmonitoring.jpg" alt="Acoustic monitoring fieldwork">
-                    <p class="image-caption">Setting up acoustic equipment at Northerly Island</p>
-                </div>
-                <h3>Acoustic Monitoring</h3>
-                <p>While wildlife monitoring is undoubtedly crucial for the conservation and understanding of endangered species, some monitoring methods can be invasive, creating challenges for both ecologists and wildlife. Passive acoustic monitoring minimizes such concerns. Furthermore, autonomous recording allows ecologists to survey species composition in remote locations and over relatively long periods of time.</p>
-                <p>I use autonomous recording units (ARUs) to study aerial wildlife including bats and birds. To do this I use field-collected data, call vetting techniques, and acoustic data processing programs such as Sonobat and Cornell's BirdNet to tell stories about how urban wildlife interacts with the cities we live in.</p>
+        <!-- Spatial Analysis Subsection -->
+        <div class="ri-subsection-container">
+            <div class="ri-image">
+                <img loading="lazy" src="assets/images/spatialanalysis.webp" alt="Spatial analysis">
+                <p class="image-caption">A tree height raster created using LiDAR data</p>
             </div>
+            <h3>Spatial Analysis</h3>
+            <p>Since a kid I have always been infatuated with maps and geography. Fond memories of leading my family around trail systems and charting the woods behind our house developed into what is now a strong affinity for answering my research questions through spatial analysis. With growing skills in GIS and ecological statistics, I am excited to see where my love for spatial analysis leads me.</p>
+            <p>My current spatial work surrounds using LiDAR data to analyze tree height and canopy in local Chicago parks. This landscape analysis in tandem with volunteer collected acoustic bat data will inform future urban planning decisions and our understanding of bats in urban ecosystems.</p>
+        </div>
 
-            <!-- Spatial Analysis Subsection -->
-            <div class="ri-subsection-container">
-                <div class="ri-image">
-                    <img src="photos/spatialanalysis.png" alt="Spatial analysis">
-                    <p class="image-caption">A tree height raster created using LiDAR data</p>
-                </div>
-                <h3>Spatial Analysis</h3>
-                <p>Since a kid I have always been infatuated with maps and geography. Fond memories of leading my family around trail systems and charting the woods behind our house developed into what is now a strong affinity for answering my research questions through spatial analysis. With growing skills in GIS and ecological statistics, I am excited to see where my love for spatial analysis leads me.</p>
-                <p>My current spatial work surrounds using LiDAR data to analyze tree height and canopy in local Chicago parks. This landscape analysis in tandem with volunteer collected acoustic bat data will inform future urban planning decisions and our understanding of bats in urban ecosystems.</p>
+        <!-- Community Science Subsection -->
+        <div class="ri-subsection-container">
+            <div class="ri-image">
+                <img loading="lazy" src="assets/images/communityscience.webp" alt="Bat tracker program">
+                <p class="image-caption">A training walk for the Bat Tracker program</p>
             </div>
+            <h3>Community Science</h3>
+            <p>My strong belief that building up communities in turn supports local wildlife informs my passion for community science. From fostering new relationships with the outdoors to hearing the public's anecdotal wildlife sightings, I value working with volunteer cohorts as an ecologist. The benefits of community science are unmistakable and I am so excited to see the field continue to grow.</p>
+            <p>
+                Much of my experience in the community science and volunteer monitoring space comes from my time as the Community Science Coordinator for the Bat Tracker program. This program, led by the assistant director at the Urban Wildlife Institute, trains volunteers in collecting acoustic bat data at their local green space. This was an incredible opportunity and truly solidified my passion for community science. Check out an article describing my work on this project
+                <a href="https://planetforward.org/story/bat-tracker/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="content-link">
+                    here.
+                </a>
+            </p>
+        </div>
+    </section>
 
-            <!-- Community Science Subsection -->
-            <div class="ri-subsection-container">
-                <div class="ri-image">
-                    <img src="photos/communityscience.jpg" alt="Bat tracker program">
-                    <p class="image-caption">A training walk for the Bat Tracker program</p>
-                </div>
-                <h3>Community Science</h3>
-                <p>My strong belief that building up communities in turn supports local wildlife informs my passion for community science. From fostering new relationships with the outdoors to hearing the public's anecdotal wildlife sightings, I value working with volunteer cohorts as an ecologist. The benefits of community science are unmistakable and I am so excited to see the field continue to grow.</p>
-<p>
-  Much of my experience in the community science and volunteer monitoring space comes from my time as the Community Science Coordinator for the Bat Tracker program. This program, led by the assistant director at the Urban Wildlife Institute, trains volunteers in collecting acoustic bat data at their local green space. This was an incredible opportunity and truly solidified my passion for community science. Check out an article describing my work on this project 
-  <a href="https://planetforward.org/story/bat-tracker/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     style="color: #656D4A;">
-    here.
-  </a>
-</p>
+    <!-- Education & Outreach Section -->
+    <section class="education-outreach">
+        <div class="eo-container">
+            <div class="eo-image">
+                <img loading="lazy" src="assets/images/educationandoutreach.webp" alt="Education and outreach work">
+                <p class="image-caption">The 2025 Research Apprenticeship (RAP) team wins an award</p>
             </div>
-        </section>
+            <h2>Education & Outreach</h2>
+            <p>I am committed to sharing my love for wildlife and ecological research with audiences across the Chicagoland area. Whether leading educational events, wildlife walks, presentations, or tabling, I connect Chicago communities with nature in order to build urban environmental literacy and inspire curiosity for local wildlife.</p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-icons">
+            <!-- LinkedIn using your saved image -->
+            <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
+                <img src="assets/images/linkedin.webp" alt="LinkedIn" width="30" height="30">
+            </a>
 
-        <!-- Education & Outreach Section -->
-        <section class="education-outreach">
-            <div class="eo-container">
-                <div class="eo-image">
-                    <img src="photos/educationandoutreach.jpg" alt="Education and outreach work">
-                    <p class="image-caption">The 2025 Research Apprenticeship (RAP) team wins an award</p>
-                </div>
-                <h2>Education & Outreach</h2>
-                <p>I am committed to sharing my love for wildlife and ecological research with audiences across the Chicagoland area. Whether leading educational events, wildlife walks, presentations, or tabling, I connect Chicago communities with nature in order to build urban environmental literacy and inspire curiosity for local wildlife.</p>
-            </div>
-        </section>
-<footer class="site-footer">
-  <div class="footer-icons">
-    <!-- LinkedIn using your saved image -->
-    <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
-      <img src="photos/linkedin.png" alt="LinkedIn" width="30" height="30">
-    </a>
+            <!-- GitHub using inline SVG (brand black) -->
+            <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
+                    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+                </svg>
+            </a>
 
-    <!-- GitHub using inline SVG (brand black) -->
-    <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
-        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
-      </svg>
-    </a>
+            <a href="mailto:ohejna@outlook.com" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
+                    <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
 
-    <a href="mailto:ohejna@outlook.com" aria-label="Email">
-  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
-    <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
-  </svg>
-</a>
-  </div>
-</footer>
-
-    </main>
+</main>
 </body>
 </html>

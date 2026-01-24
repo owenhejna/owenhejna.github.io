@@ -1,0 +1,63 @@
+/* ====== Reset and Base Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Geom', 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #BCB88A;
+  color: #312E26;
+}
+
+/* ====== Main content defaults ====== */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* ====== Images ====== */
+section img {
+  display: block;
+  margin-top: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== Image Captions ====== */
+.image-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+  color: #312E26;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* ====== Links ====== */
+a {
+  color: #656D4A;
+}
+
+a:hover {
+  text-decoration: underline;
+}
