@@ -73,6 +73,25 @@
   text-decoration: underline;
 }
 
+/* ====== Blog Post Figure ====== */
+.post-figure {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.post-figure img {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.post-figure figcaption {
+  font-size: 0.9rem;
+  color: #656D4A;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 /* ====== Blog Box Top Birds ====== */
 .box-bird {
   position: absolute;

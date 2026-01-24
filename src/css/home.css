@@ -80,6 +80,11 @@
   object-fit: cover;
 }
 
+/* ====== Content Links ====== */
+.content-link {
+  color: #656D4A;
+}
+
 /* ====== Mobile Responsiveness ====== */
 @media (max-width: 768px) {
   .about-image,
