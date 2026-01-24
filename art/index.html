@@ -1,201 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="art-page">
 <head>
-    <link rel="icon" type="image/png" href="../photos/chickadee.png">
+    <link rel="icon" type="image/png" href="../assets/images/chickadee.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
-
-    <link rel="stylesheet" href="../css/style.css">
-
-    <style>
-        body {
-            background-color: #BCB88A;
-            color: #312E26;
-        }
-
-        main {
-            max-width: 1400px;
-            margin: auto;
-            padding: 0 2rem 2rem 2rem;
-        }
-
-        .portfolio-hero {
-            text-align: center;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .portfolio-hero h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.1rem;
-        }
-
-        .portfolio-hero p {
-            font-size: 1.1rem;
-            margin-top: 0.2rem;
-        }
-
-        .portfolio-section {
-            margin-bottom: 4rem;
-        }
-
-        .portfolio-section .section-description {
-            font-size: 1rem;
-            color: #312E26;
-            margin-top: 0rem;
-            margin-bottom: 1.3rem;
-            text-align: center;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #656D4A;
-            margin-top: 0;
-            margin-bottom: .2rem;
-        }
-
-        .portfolio-grid {
-            column-count: 4;
-            column-gap: 1.5rem;
-        }
-
-        @media (max-width: 1200px) { .portfolio-grid { column-count: 3; } }
-        @media (max-width: 800px) { .portfolio-grid { column-count: 2; } }
-        @media (max-width: 500px) { .portfolio-grid { column-count: 1; } }
-
-        .portfolio-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
-            position: relative;
-            overflow: visible;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .portfolio-item img, canvas {
-            width: 100%;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(101,109,74,0.95), rgba(49,46,38,0.95));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            padding: 1.5rem;
-            text-align: center;
-            pointer-events: none;
-        }
-
-        .image-container:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-overlay p {
-            color: #fff;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        /* Title and date below image */
-        .item-info {
-            padding: 0.8rem 1rem;
-            background: #fff;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .item-info h3 {
-            color: #656D4A;
-            margin: 0 0 0.3rem 0;
-            font-size: 1.1rem;
-        }
-
-        .item-info .date {
-            color: #666;
-            font-style: italic;
-            font-size: 0.85rem;
-            margin: 0;
-        }
-
-        /* Redesigned color pickers */
-        .color-pickers {
-            padding: 0.6rem;
-            background: #f5f5f5;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .color-picker-group {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: white;
-            padding: 0.3rem 0.6rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            transition: all 0.2s ease;
-        }
-
-        .color-picker-group:hover {
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            transform: translateY(-1px);
-        }
-
-        .color-picker-group label {
-            font-size: 0.75rem;
-            color: #555;
-            font-weight: 500;
-            margin: 0;
-            white-space: nowrap;
-        }
-
-        .color-picker-group input[type="color"] {
-            width: 30px;
-            height: 30px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .color-picker-group input[type="color"]:hover {
-            border-color: #656D4A;
-            transform: scale(1.05);
-        }
-
-        /* Pixel Art Section */
-        .pixel-art-image {
-            width: 100%;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/base.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/art.css">
 </head>
 
 <body>
@@ -212,411 +26,382 @@
 </header>
 
 <main>
-<section class="portfolio-hero">
-    <h2>Welcome to my art gallery!</h2>
-    <p>Below you'll find a collection of my wildlife-inspired prints and pixel art. While I am a relatively new artist, I'm excited to grow into new mediums and explore subjects beyond wildlife and landscapes.</p>
-</section>
+    <section class="portfolio-hero">
+        <h2>Welcome to my art gallery!</h2>
+        <p>Below you'll find a collection of my wildlife-inspired prints and pixel art. While I am a relatively new artist, I'm excited to grow into new mediums and explore subjects beyond wildlife and landscapes.</p>
+    </section>
 
-<section class="portfolio-section">
-    <h3 class="section-title">Linocut Prints</h3>
-    <p class="section-description">A collection of my hand-carved linoleum prints. Hover to see descriptions, and use the color pickers to customize!</p>
-    <div class="portfolio-grid">
+    <section class="portfolio-section">
+        <h3 class="section-title">Linocut Prints</h3>
+        <p class="section-description">A collection of my hand-carved linoleum prints. Hover to see descriptions, and use the color pickers to customize!</p>
+        <div class="portfolio-grid">
 
-        <!-- Common Loon -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="loonCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portrait of a loon on a boreal lake. This is the first linocut I completed and is heavily inspired by a loon portrait found on pinterest. Original print is 6"x6".</p>
+            <!-- Common Loon -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="loonCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A portrait of a loon on a boreal lake. This is the first linocut I completed and is heavily inspired by a loon portrait found on pinterest. Original print is 6"x6".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Common Loon</h3>
+                    <p class="date">Nov 2025</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="loonWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="loonBlack" value="#000000">
+                    </div>
                 </div>
             </div>
-            <div class="item-info">
-                <h3>Common Loon</h3>
-                <p class="date">Nov 2025</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="loonWhite" value="#ffffff">
+
+            <!-- Winter Coyote -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="coyoteCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A portrait of a coyote walking through an evergreen forest in the winter. This print is originally 6"x6".</p>
+                    </div>
                 </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="loonBlack" value="#000000">
+                <div class="item-info">
+                    <h3>Winter Coyote</h3>
+                    <p class="date">Jan 2026</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="coyoteWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="coyoteBlack" value="#000000">
+                    </div>
                 </div>
             </div>
+
+            <!-- Barn Owl -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="barnowlCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A portait of a barn owl hunting agriculture fields in the moonlight. Original print is 5 3/4"x7 3/4".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Barn Owl</h3>
+                    <p class="date">Jan 2026</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="barnowlWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="barnowlBlack" value="#000000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cardinal -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="cardinalCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A small stamp of a cardinal.Original print is 2 5/8"x3".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Northern Cardinal</h3>
+                    <p class="date">Dec 2025</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="cardinalWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="cardinalBlack" value="#000000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creeper -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="creeperCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A creeper sprialing a birch tree. This was the second lincout I completed and this print is meant to be a bookmark. Original print is 1 1/2"x6".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Brown Creeper</h3>
+                    <p class="date">Nov 2025</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="creeperWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="creeperBlack" value="#000000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pygmy Owl -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="pygmyowlCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A portrait of a Ferruginous Pygmy Owl based off a picture I took of one in Mexico. They are adorable, tiny, and diurnal. Original print is 5"x3 3/4".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Ferruginous Pygmy Owl</h3>
+                    <p class="date">Dec 2025</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="whiteColor" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="blackColor" value="#000000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chickadee -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="chickadeeCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A small stamp of a black-capped chickadee. Original stamp is 3"x2".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Black-capped Chickadee</h3>
+                    <p class="date">Jan 2026</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="chickadeeWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="chickadeeBlack" value="#000000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Willow Tree -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <canvas id="willowCanvas"></canvas>
+                    <div class="portfolio-overlay">
+                        <p>A portrait of a graceful willow tree on a lake under moonlight. Inspired by my time spent working for the Chicago Botanic Garden where I would often trim big willow trees. Original print is 6"x6".</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Willow Tree</h3>
+                    <p class="date">Jan 2026</p>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-picker-group">
+                        <label>Carved</label>
+                        <input type="color" id="willowWhite" value="#ffffff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label>Not Carved</label>
+                        <input type="color" id="willowBlack" value="#000000">
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- Winter Coyote -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="coyoteCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portrait of a coyote walking through an evergreen forest in the winter. This print is originally 6"x6".</p>
+    <section class="portfolio-section">
+        <h3 class="section-title">Pixel Art</h3>
+        <p class="section-description">A collection of my pixel art. mostly collections of sprites inspired by real world species.</p>
+
+        <div class="portfolio-grid">
+
+            <!-- Bird Sprites -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img
+                            src="../assets/images/art/pixel/birds.webp"
+                            alt="Pixel bird sprites"
+                            class="pixel-art-image"
+                    >
+                    <div class="portfolio-overlay" style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(6, 1fr); gap: 0; padding: 0;">
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Baltimore</span><span>Oriole</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Blue</span><span>Jay</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>American</span><span>Goldfinch</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Black-capped</span><span>Chickadee</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Red-bellied</span><span>Woodpecker</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Rose-breasted</span><span>Grosbeak</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Northern</span><span>Cardinal</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Indigo</span><span>Bunting</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Dark-eyed</span><span>Junco</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: 40px;">
+                            <span>Red-headed</span><span>Woodpecker</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Red-winged</span><span>Blackbird</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Cedar</span><span>Waxwing</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Painted</span><span>Bunting</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>American</span><span>Redstart</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: 40px;">
+                            <span>Northern</span><span>Flicker</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>American</span><span>Robin</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Tufted</span><span>Titmouse</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Eastern</span><span>Bluebird</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Downy</span><span>Woodpecker</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span></span><span></span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Yellow-headed</span><span>Blackbird</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Pyrrhuloxia</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Scarlet</span><span>Tanager</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>White-breasted</span><span>Nuthatch</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: -30px;">
+                            <span>Yellow-bellied</span><span>Sapsucker</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Gray</span><span>Catbird</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Stellar's</span><span>Jay</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Western</span><span>Tanager</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Red-breasted</span><span>Nuthatch</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>White-breasted</span><span>Nuthatch</span></div>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>North American Bird Sprites</h3>
+                    <p class="date">Winter 2025</p>
                 </div>
             </div>
-            <div class="item-info">
-                <h3>Winter Coyote</h3>
-                <p class="date">Jan 2026</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="coyoteWhite" value="#ffffff">
+
+            <!-- Bat Sprites -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img
+                            src="../assets/images/art/pixel/bats.webp"
+                            alt="Pixel bat sprites"
+                            class="pixel-art-image"
+                    >
+                    <div class="portfolio-overlay" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); gap: 0; padding: 0;">
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Hoary</span><span>Bat</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Silver-haired</span><span>Bat</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Eastern Red</span><span>Bat</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Northern Long-eared</span><span>Bat</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Big Brown</span><span>Bat</span></div>
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;">
+                            <span>Tri-colored</span><span>Bat</span></div>
+                    </div>
                 </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="coyoteBlack" value="#000000">
+                <div class="item-info">
+                    <h3>Chicago Bat Sprites</h3>
+                    <p class="date">Winter 2025</p>
                 </div>
             </div>
+
+            <!-- Wood Duck -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img
+                            src="../assets/images/art/pixel/woodduck.webp"
+                            alt="Pixel wood duck"
+                            class="pixel-art-image"
+                    >
+                    <div class="portfolio-overlay">
+                        <p>A pixel art portrait of a wood duck. An absolutely picturesque North American species(and also my favorite duck).</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Wood Duck</h3>
+                    <p class="date">Winter 2025/26</p>
+                </div>
+            </div>
+
+            <!-- Swamp Scene -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img
+                            src="../assets/images/art/pixel/swamp.webp"
+                            alt="Pixel swamp scene"
+                            class="pixel-art-image"
+                    >
+                    <div class="portfolio-overlay">
+                        <p>A pixel-art swamp scene featuring an egret. This is my first attempt at a landscape scene in pixel.</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Swamp</h3>
+                    <p class="date">Winter 2025/26</p>
+                </div>
+            </div>
+
+            <!-- Windwaker -->
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img
+                            src="../assets/images/art/pixel/windwaker.webp"
+                            alt="Pixel Windwaker scene"
+                            class="pixel-art-image"
+                    >
+                    <div class="portfolio-overlay">
+                        <p>A pixel art creation of the hero sailing through the Great Sea after leaving Outset Island.</p>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Windwaker</h3>
+                    <p class="date">Winter 2026</p>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Barn Owl -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="barnowlCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portait of a barn owl hunting agriculture fields in the moonlight. Original print is 5 3/4"x7 3/4".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Barn Owl</h3>
-                <p class="date">Jan 2026</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="barnowlWhite" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="barnowlBlack" value="#000000">
-                </div>
-            </div>
-        </div>
-
-        <!-- Cardinal -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="cardinalCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A small stamp of a cardinal.Original print is 2 5/8"x3".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Northern Cardinal</h3>
-                <p class="date">Dec 2025</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="cardinalWhite" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="cardinalBlack" value="#000000">
-                </div>
-            </div>
-        </div>
-
-        <!-- Creeper -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="creeperCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A creeper sprialing a birch tree. This was the second lincout I completed and this print is meant to be a bookmark. Original print is 1 1/2"x6".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Brown Creeper</h3>
-                <p class="date">Nov 2025</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="creeperWhite" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="creeperBlack" value="#000000">
-                </div>
-            </div>
-        </div>
-
-        <!-- Pygmy Owl -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="pygmyowlCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portrait of a Ferruginous Pygmy Owl based off a picture I took of one in Mexico. They are adorable, tiny, and diurnal. Original print is 5"x3 3/4".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Ferruginous Pygmy Owl</h3>
-                <p class="date">Dec 2025</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="whiteColor" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="blackColor" value="#000000">
-                </div>
-            </div>
-        </div>
-
-        <!-- Chickadee -->
-<div class="portfolio-item">
-    <div class="image-container">
-        <canvas id="chickadeeCanvas"></canvas>
-        <div class="portfolio-overlay">
-            <p>A small stamp of a black-capped chickadee. Original stamp is 3"x2".</p>
-        </div>
-    </div>
-    <div class="item-info">
-        <h3>Black-capped Chickadee</h3>
-        <p class="date">Jan 2026</p>
-    </div>
-    <div class="color-pickers">
-        <div class="color-picker-group">
-            <label>Carved</label>
-            <input type="color" id="chickadeeWhite" value="#ffffff">
-        </div>
-        <div class="color-picker-group">
-            <label>Not Carved</label>
-            <input type="color" id="chickadeeBlack" value="#000000">
-        </div>
-    </div>
-</div>
-
-        <!-- Willow Tree -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="willowCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portrait of a graceful willow tree on a lake under moonlight. Inspired by my time spent working for the Chicago Botanic Garden where I would often trim big willow trees. Original print is 6"x6".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Willow Tree</h3>
-                <p class="date">Jan 2026</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="willowWhite" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="willowBlack" value="#000000">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="portfolio-section">
-    <h3 class="section-title">Pixel Art</h3>
-    <p class="section-description">A collection of my pixel art. mostly collections of sprites inspired by real world species.</p>
-
-    <div class="portfolio-grid">
-        
-        <!-- Bird Sprites -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img
-                    src="../photos/art/pixel/birds.png"
-                    alt="Pixel bird sprites"
-                    class="pixel-art-image"
-                >
-                <div class="portfolio-overlay" style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(6, 1fr); gap: 0; padding: 0;">
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Baltimore</span><span>Oriole</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Blue</span><span>Jay</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>American</span><span>Goldfinch</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Black-capped</span><span>Chickadee</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Red-bellied</span><span>Woodpecker</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Rose-breasted</span><span>Grosbeak</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Northern</span><span>Cardinal</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Indigo</span><span>Bunting</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Dark-eyed</span><span>Junco</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: 40px;"><span>Red-headed</span><span>Woodpecker</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Red-winged</span><span>Blackbird</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Cedar</span><span>Waxwing</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Painted</span><span>Bunting</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>American</span><span>Redstart</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: 40px;"><span>Northern</span><span>Flicker</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>American</span><span>Robin</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Tufted</span><span>Titmouse</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Eastern</span><span>Bluebird</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Downy</span><span>Woodpecker</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span></span><span></span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Yellow-headed</span><span>Blackbird</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Pyrrhuloxia</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Scarlet</span><span>Tanager</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>White-breasted</span><span>Nuthatch</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold; position: relative; top: -30px;"><span>Yellow-bellied</span><span>Sapsucker</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Gray</span><span>Catbird</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Stellar's</span><span>Jay</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Western</span><span>Tanager</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Red-breasted</span><span>Nuthatch</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>White-breasted</span><span>Nuthatch</span></div>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>North American Bird Sprites</h3>
-                <p class="date">Winter 2025</p>
-            </div>
-        </div>
-
-        <!-- Bat Sprites -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img
-                    src="../photos/art/pixel/bats.png"
-                    alt="Pixel bat sprites"
-                    class="pixel-art-image"
-                >
-                <div class="portfolio-overlay" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); gap: 0; padding: 0;">
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Hoary</span><span>Bat</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Silver-haired</span><span>Bat</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Eastern Red</span><span>Bat</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Northern Long-eared</span><span>Bat</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Big Brown</span><span>Bat</span></div>
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #fff; font-weight: bold;"><span>Tri-colored</span><span>Bat</span></div>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Chicago Bat Sprites</h3>
-                <p class="date">Winter 2025</p>
-            </div>
-        </div>
-
-        <!-- Wood Duck -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img
-                    src="../photos/art/pixel/woodduck.png"
-                    alt="Pixel wood duck"
-                    class="pixel-art-image"
-                >
-                <div class="portfolio-overlay">
-                    <p>A pixel art portrait of a wood duck. An absolutely picturesque North American species(and also my favorite duck).</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Wood Duck</h3>
-                <p class="date">Winter 2025/26</p>
-            </div>
-        </div>
-
-        <!-- Swamp Scene -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img
-                    src="../photos/art/pixel/swamp.png"
-                    alt="Pixel swamp scene"
-                    class="pixel-art-image"
-                >
-                <div class="portfolio-overlay">
-                    <p>A pixel-art swamp scene featuring an egret. This is my first attempt at a landscape scene in pixel.</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Swamp</h3>
-                <p class="date">Winter 2025/26</p>
-            </div>
-        </div>
-
-         <!-- Windwaker -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img
-                    src="../photos/art/pixel/windwaker.png"
-                    alt="Pixel Windwaker scene"
-                    class="pixel-art-image"
-                >
-                <div class="portfolio-overlay">
-                    <p>A pixel art creation of the hero sailing through the Great Sea after leaving Outset Island.</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Windwaker</h3>
-                <p class="date">Winter 2026</p>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 </main>
 
-<script>
-function setupEditableCanvas(canvasId, imgSrc, whiteInputId, blackInputId) {
-    const canvas = document.getElementById(canvasId);
-    const ctx = canvas.getContext('2d');
-    const img = new Image();
-    img.src = imgSrc;
-
-    const whiteInput = document.getElementById(whiteInputId);
-    const blackInput = document.getElementById(blackInputId);
-
-    img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        drawCanvas();
-    };
-
-    whiteInput.addEventListener('input', drawCanvas);
-    blackInput.addEventListener('input', drawCanvas);
-
-    function drawCanvas() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
-
-        const carvedColor = hexToRgb(whiteInput.value);
-        const notCarvedColor = hexToRgb(blackInput.value);
-
-        for (let i = 0; i < data.length; i += 4) {
-            const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
-            if (brightness > 200) {
-                data[i] = carvedColor.r;
-                data[i+1] = carvedColor.g;
-                data[i+2] = carvedColor.b;
-            } else {
-                data[i] = notCarvedColor.r;
-                data[i+1] = notCarvedColor.g;
-                data[i+2] = notCarvedColor.b;
-            }
-        }
-
-        ctx.putImageData(imageData, 0, 0);
-    }
-
-    function hexToRgb(hex) {
-        hex = hex.replace(/^#/, '');
-        let bigint = parseInt(hex, 16);
-        if (hex.length === 6) {
-            return { r:(bigint>>16)&255, g:(bigint>>8)&255, b:bigint&255 };
-        } else if (hex.length === 3) {
-            return { r:((bigint>>8)&15)*17, g:((bigint>>4)&15)*17, b:(bigint&15)*17 };
-        }
-    }
-}
-
-// Initialize all editable canvases
-setupEditableCanvas('loonCanvas', '../photos/art/linocuts/loon.png', 'loonWhite', 'loonBlack');
-setupEditableCanvas('pygmyowlCanvas', '../photos/art/linocuts/pygmyowl.png', 'whiteColor', 'blackColor');
-setupEditableCanvas('coyoteCanvas', '../photos/art/linocuts/wintercoyote.png', 'coyoteWhite', 'coyoteBlack');
-setupEditableCanvas('cardinalCanvas', '../photos/art/linocuts/cardinal.png', 'cardinalWhite', 'cardinalBlack');
-setupEditableCanvas('barnowlCanvas', '../photos/art/linocuts/barnowl.png', 'barnowlWhite', 'barnowlBlack');
-setupEditableCanvas('creeperCanvas', '../photos/art/linocuts/creeper.png', 'creeperWhite', 'creeperBlack');
-setupEditableCanvas('chickadeeCanvas', '../photos/art/linocuts/chickadee.png', 'chickadeeWhite', 'chickadeeBlack');
-setupEditableCanvas('willowCanvas', '../photos/art/linocuts/willowtree.png', 'willowWhite', 'willowBlack');
-</script>
-
+<script src="../src/js/art.js"></script>
 </body>
 </html>

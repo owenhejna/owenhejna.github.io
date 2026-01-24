@@ -1,473 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/photos/chickadee.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sightings</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="icon" type="image/webp" href="/assets/images/chickadee.webp">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sightings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/base.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/components.css">
+    <link rel="stylesheet" href="../src/css/wildlife.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 
 <body>
-  <header>
+<header>
     <h1>Sightings</h1>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-      <a href="../blog/index.html">Blog</a>
-      <a href="../art/index.html">Art</a>
-      <a href="index.html">Sightings</a>
+        <a href="../index.html">Home</a>
+        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../art/index.html">Art</a>
+        <a href="index.html">Sightings</a>
     </nav>
-  </header>
+</header>
 
-  <main class="wildlife-container">
-  <section class="sightings-intro">
-    <h2>Welcome to the sightings page!</h2>
-    <p>
-      While I am no photographer, I do run into a lot of cool wildlife on the job, while traveling, and around the neighborhood. 
-      This page serves as a collection of my interesting or rare wildlife sightings over the years. Click on any card to expand it or check out an interactive map of all the listed sightings.
-    </p>
-  </section>
+<main class="wildlife-container">
+    <section class="sightings-intro">
+        <h2>Welcome to the sightings page!</h2>
+        <p>
+            While I am no photographer, I do run into a lot of cool wildlife on the job, while traveling, and around the neighborhood.
+            This page serves as a collection of my interesting or rare wildlife sightings over the years. Click on any card to expand it or check out an interactive map of all the listed sightings.
+        </p>
+    </section>
 
     <!-- Toggle Buttons -->
     <div class="view-buttons">
-      <button id="gridViewBtn" class="active">Grid View</button>
-      <button id="mapViewBtn">Map View</button>
+        <button id="gridViewBtn" class="active">Grid View</button>
+        <button id="mapViewBtn">Map View</button>
     </div>
 
     <!-- Sightings Section -->
     <section id="sightings" class="grid-view">
 
-<!-- Ferruginous Pygmy Owl -->
-<div class="sighting" data-date="2025-11-01" data-species="Ferruginous Pygmy Owl">
-  <img src="../photos/ferriginouspygmyowl.png" alt="Ferruginous Pygmy Owl">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Ferruginous Pygmy Owl</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Tulum, Mexico</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">November 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Ferruginous Pygmy Owl -->
+        <div class="sighting" data-date="2025-11-01" data-species="Ferruginous Pygmy Owl">
+            <img loading="lazy" src="../assets/images/ferriginouspygmyowl.webp" alt="Ferruginous Pygmy Owl">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Ferruginous Pygmy Owl</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Tulum, Mexico</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">November 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Snowy Owl -->
-<div class="sighting" data-date="2025-11-01" data-species="Snowy Owl">
-  <img src="../photos/snowyowl.png" alt="Snowy Owl">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Snowy Owl</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Chicago, IL</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">November 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Snowy Owl -->
+        <div class="sighting" data-date="2025-11-01" data-species="Snowy Owl">
+            <img loading="lazy" src="../assets/images/snowyowl.webp" alt="Snowy Owl">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Snowy Owl</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Chicago, IL</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">November 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Greater Roadrunner -->
-<div class="sighting" data-date="2025-01-01" data-species="Greater Roadrunner">
-  <img src="../photos/roadrunner.png" alt="Greater Roadrunner">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Greater Roadrunner</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Tuscon, AZ</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">January 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Greater Roadrunner -->
+        <div class="sighting" data-date="2025-01-01" data-species="Greater Roadrunner">
+            <img loading="lazy" src="../assets/images/roadrunner.webp" alt="Greater Roadrunner">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Greater Roadrunner</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Tuscon, AZ</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">January 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Moose -->
-<div class="sighting" data-date="2024-10-01" data-species="Moose">
-  <img src="../photos/moose.png" alt="Moose">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Moose</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Jackson, WY</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">October 2024</span>
-    </div>
-  </div>
-</div>
+        <!-- Moose -->
+        <div class="sighting" data-date="2024-10-01" data-species="Moose">
+            <img loading="lazy" src="../assets/images/moose.webp" alt="Moose">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Moose</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Jackson, WY</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">October 2024</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Greater White-fronted Goose -->
-<div class="sighting" data-date="2025-11-01" data-species="Greater White-fronted Goose">
-  <img src="../photos/greaterwhitefrontedgoose.png" alt="Greater White-fronted Goose">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Greater White-fronted Goose</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Chicago, IL</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">November 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Greater White-fronted Goose -->
+        <div class="sighting" data-date="2025-11-01" data-species="Greater White-fronted Goose">
+            <img loading="lazy" src="../assets/images/greaterwhitefrontedgoose.webp" alt="Greater White-fronted Goose">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Greater White-fronted Goose</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Chicago, IL</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">November 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Common Potoo -->
-<div class="sighting" data-date="2024-01-01" data-species="Common Potoo">
-  <img src="../photos/potoo.png" alt="Common Potoo">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Common Potoo</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Costa Rica</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">January 2024</span>
-    </div>
-  </div>
-</div>
+        <!-- Common Potoo -->
+        <div class="sighting" data-date="2024-01-01" data-species="Common Potoo">
+            <img loading="lazy" src="../assets/images/potoo.webp" alt="Common Potoo">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Common Potoo</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Costa Rica</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">January 2024</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Motmot -->
-<div class="sighting" data-date="2024-01-01" data-species="Lesson's Motmot">
-  <img src="../photos/motmot.png" alt="Lesson's Motmot">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Lesson's Motmot</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Costa Rica</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">January 2024</span>
-    </div>
-  </div>
-</div>
+        <!-- Motmot -->
+        <div class="sighting" data-date="2024-01-01" data-species="Lesson's Motmot">
+            <img loading="lazy" src="../assets/images/motmot.webp" alt="Lesson's Motmot">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Lesson's Motmot</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Costa Rica</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">January 2024</span>
+                </div>
+            </div>
+        </div>
 
-<!-- American Bison -->
-<div class="sighting" data-date="2023-03-01" data-species="American Bison">
-  <img src="../photos/bison.png" alt="American Bison">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">American Bison</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Yellowstone, WY</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">March 2023</span>
-    </div>
-  </div>
-</div>
+        <!-- American Bison -->
+        <div class="sighting" data-date="2023-03-01" data-species="American Bison">
+            <img loading="lazy" src="../assets/images/bison.webp" alt="American Bison">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">American Bison</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Yellowstone, WY</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">March 2023</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Elk -->
-<div class="sighting" data-date="2023-03-01" data-species="Elk">
-  <img src="../photos/elk.png" alt="Elk">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Elk</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Yellowstone, WY</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">March 2023</span>
-    </div>
-  </div>
-</div>
+        <!-- Elk -->
+        <div class="sighting" data-date="2023-03-01" data-species="Elk">
+            <img loading="lazy" src="../assets/images/elk.webp" alt="Elk">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Elk</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Yellowstone, WY</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">March 2023</span>
+                </div>
+            </div>
+        </div>
 
-<!-- American Bittern -->
-<div class="sighting" data-date="2024-09-01" data-species="American Bittern">
-  <img src="../photos/bittern.png" alt="American Bittern">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">American Bittern</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Chicago, IL</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">September 2024</span>
-    </div>
-  </div>
-</div>
+        <!-- American Bittern -->
+        <div class="sighting" data-date="2024-09-01" data-species="American Bittern">
+            <img loading="lazy" src="../assets/images/bittern.webp" alt="American Bittern">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">American Bittern</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Chicago, IL</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">September 2024</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Egyptian Goose -->
-<div class="sighting" data-date="2023-05-01" data-species="Egyptian Goose">
-  <img src="../photos/egyptiangeese.png" alt="Egyptian Goose">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Egyptian Goose</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Amsterdam, Netherlands</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">May 2023</span>
-    </div>
-  </div>
-</div>
+        <!-- Egyptian Goose -->
+        <div class="sighting" data-date="2023-05-01" data-species="Egyptian Goose">
+            <img loading="lazy" src="../assets/images/egyptiangeese.webp" alt="Egyptian Goose">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Egyptian Goose</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Amsterdam, Netherlands</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">May 2023</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Long-eared Owl -->
-<div class="sighting" data-date="2023-11-01" data-species="Long-eared Owl">
-  <img src="../photos/longearedowl.png" alt="Long-eared Owl">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Long-eared Owl</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Chicago, IL</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">November 2023</span>
-    </div>
-  </div>
-</div>
+        <!-- Long-eared Owl -->
+        <div class="sighting" data-date="2023-11-01" data-species="Long-eared Owl">
+            <img loading="lazy" src="../assets/images/longearedowl.webp" alt="Long-eared Owl">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Long-eared Owl</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Chicago, IL</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">November 2023</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Pileated Woodpecker -->
-<div class="sighting" data-date="2022-06-01" data-species="Pileated Woodpecker">
-  <img src="../photos/pilleated.png" alt="Pileated Woodpecker">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Pileated Woodpecker</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">AuSable, MI</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">June 2022</span>
-    </div>
-  </div>
-</div>
+        <!-- Pileated Woodpecker -->
+        <div class="sighting" data-date="2022-06-01" data-species="Pileated Woodpecker">
+            <img loading="lazy" src="../assets/images/pilleated.webp" alt="Pileated Woodpecker">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Pileated Woodpecker</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">AuSable, MI</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">June 2022</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Mexican Free-tailed Bat -->
-<div class="sighting" data-date="2025-11-01" data-species="Mexican Free-tailed Bat">
-  <img src="../photos/mexicanfreetailed.png" alt="Mexican Free-tailed Bat">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Mexican Free-tailed Bat</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Tulum, Mexico</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">November 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Mexican Free-tailed Bat -->
+        <div class="sighting" data-date="2025-11-01" data-species="Mexican Free-tailed Bat">
+            <img loading="lazy" src="../assets/images/mexicanfreetailed.webp" alt="Mexican Free-tailed Bat">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Mexican Free-tailed Bat</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Tulum, Mexico</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">November 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Black-billed Cuckoo -->
-<div class="sighting" data-date="2025-08-01" data-species="Black-billed Cuckoo">
-  <img src="../photos/cuckoo.png" alt="Black-billed Cuckoo">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Black-billed Cuckoo</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Green Bay, WI</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">August 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Black-billed Cuckoo -->
+        <div class="sighting" data-date="2025-08-01" data-species="Black-billed Cuckoo">
+            <img loading="lazy" src="../assets/images/cuckoo.webp" alt="Black-billed Cuckoo">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Black-billed Cuckoo</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Green Bay, WI</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">August 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Acorn Woodpecker -->
-<div class="sighting" data-date="2025-01-01" data-species="Acorn Woodpecker">
-  <img src="../photos/acornwoodpecker.png" alt="Acorn Woodpecker">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Acorn Woodpecker</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Tucson, AZ</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">January 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Acorn Woodpecker -->
+        <div class="sighting" data-date="2025-01-01" data-species="Acorn Woodpecker">
+            <img loading="lazy" src="../assets/images/acornwoodpecker.webp" alt="Acorn Woodpecker">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Acorn Woodpecker</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Tucson, AZ</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">January 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Elegant Trogon -->
-<div class="sighting" data-date="2025-01-01" data-species="Elegant Trogon">
-  <img src="../photos/trojon.png" alt="Elegant Trogon">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Elegant Trogon</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Tucson, AZ</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">January 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Elegant Trogon -->
+        <div class="sighting" data-date="2025-01-01" data-species="Elegant Trogon">
+            <img loading="lazy" src="../assets/images/trojon.webp" alt="Elegant Trogon">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Elegant Trogon</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Tucson, AZ</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">January 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Cliff Swallows -->
-<div class="sighting" data-date="2025-07-01" data-species="Cliff Swallow">
-  <img src="../photos/cliffswallows.png" alt="Cliff Swallows">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Cliff Swallow</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Chicago, IL</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">July 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Cliff Swallows -->
+        <div class="sighting" data-date="2025-07-01" data-species="Cliff Swallow">
+            <img loading="lazy" src="../assets/images/cliffswallows.webp" alt="Cliff Swallows">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Cliff Swallow</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Chicago, IL</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">July 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Mandarin Duck -->
-<div class="sighting" data-date="2023-05-01" data-species="Mandarin Duck">
-  <img src="../photos/mandarinduck.png" alt="Mandarin Duck">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Mandarin Duck</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Berlin, Germany</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">May 2025</span>
-    </div>
-  </div>
-</div>
+        <!-- Mandarin Duck -->
+        <div class="sighting" data-date="2023-05-01" data-species="Mandarin Duck">
+            <img loading="lazy" src="../assets/images/mandarinduck.webp" alt="Mandarin Duck">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Mandarin Duck</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Berlin, Germany</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">May 2025</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Eurasian Hoopoe -->
-<div class="sighting" data-date="2023-05-01" data-species="Eurasian Hoopoe">
-  <img src="../photos/hoopoe.png" alt="Eurasian Hoopoe">
-  <div class="sighting-info">
-    <div class="info-row">
-      <span class="icon species-icon"></span>
-      <span class="info-text">Eurasian Hoopoe</span>
-    </div>
-    <div class="info-row">
-      <span class="icon location-icon"></span>
-      <span class="info-text">Barcelona, Spain</span>
-    </div>
-    <div class="info-row">
-      <span class="icon date-icon"></span>
-      <span class="info-text">May 2023</span>
-    </div>
-  </div>
-</div>
+        <!-- Eurasian Hoopoe -->
+        <div class="sighting" data-date="2023-05-01" data-species="Eurasian Hoopoe">
+            <img loading="lazy" src="../assets/images/hoopoe.webp" alt="Eurasian Hoopoe">
+            <div class="sighting-info">
+                <div class="info-row">
+                    <span class="icon species-icon"></span>
+                    <span class="info-text">Eurasian Hoopoe</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon location-icon"></span>
+                    <span class="info-text">Barcelona, Spain</span>
+                </div>
+                <div class="info-row">
+                    <span class="icon date-icon"></span>
+                    <span class="info-text">May 2023</span>
+                </div>
+            </div>
+        </div>
 
     </section>
 
     <!-- Map Section (moved outside #sightings) -->
     <section id="map-container" style="display: none;">
-      <div id="map"></div>
+        <div id="map"></div>
     </section>
 
     <!-- Modal -->
     <div id="sightingModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title">Species Name</h2>
-        <h3 id="modal-scientific-name"><em>Scientific Name</em></h3>
-        <img id="modal-img" src="" alt="Species Image">
-        <p id="modal-description">Species description goes here.</p>
-      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Species Name</h2>
+            <h3 id="modal-scientific-name"><em>Scientific Name</em></h3>
+            <img id="modal-img" src="" alt="Species Image">
+            <p id="modal-description">Species description goes here.</p>
+        </div>
     </div>
-    <div class="inaturalist-link" style="text-align: center; margin: 2rem 0 1rem 0; font-size: 1.1rem;">
-  Check out even more sightings on my <a href="https://www.inaturalist.org/people/owenhej" target="_k" style="color: #656D4A; text-decoration: underline;">iNaturalist page</a>
-</div>
+    <div class="inaturalist-link">
+        Check out even more sightings on my
+        <a href="https://www.inaturalist.org/people/owenhej" target="_blank">iNaturalist page</a>
+    </div>
 
     <footer class="site-footer">
-      <div class="footer-icons">
-        <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
-          <img src="../photos/linkedin.png" alt="LinkedIn" width="30" height="30">
-        </a>
+        <div class="footer-icons">
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/owen-hejna-5a79311a0" target="_blank" aria-label="LinkedIn">
+                <img loading="lazy" src="../assets/images/linkedin.webp" alt="LinkedIn" width="30" height="30">
+            </a>
 
-        <!-- GitHub -->
-        <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
-            <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
-          </svg>
-        </a>
+            <!-- GitHub -->
+            <a href="https://github.com/owenhejna" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#181717">
+                    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.58 0-.29-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.38-1.334-1.748-1.334-1.748-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.116-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.815 1.102.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+                </svg>
+            </a>
 
-        <!-- Email -->
-        <a href="mailto:ohejna@outlook.com" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
-            <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
-          </svg>
-        </a>
-      </div>
+            <!-- Email -->
+            <a href="mailto:ohejna@outlook.com" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#656D4A">
+                    <path d="M12 13.065l-11.25-7.065h22.5l-11.25 7.065zm0 2.935l-12-7.5v11h24v-11l-12 7.5z"/>
+                </svg>
+            </a>
+        </div>
     </footer>
 
-  </main>
+</main>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="../js/wildlife.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../src/js/wildlife.js"></script>
 </body>
 </html>
