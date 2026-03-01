@@ -64,6 +64,12 @@
             column-gap: 1.5rem;
         }
 
+        #creeperCanvas {
+            max-height: 300px;
+            width: auto !important;
+            margin: 0 auto;
+        }
+
         @media (max-width: 1200px) { .portfolio-grid { column-count: 3; } }
         @media (max-width: 800px) { .portfolio-grid { column-count: 2; } }
         @media (max-width: 500px) { .portfolio-grid { column-count: 1; } }
@@ -131,6 +137,12 @@
             color: #656D4A;
             margin: 0 0 0.3rem 0;
             font-size: 1.1rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .item-info h3:hover {
+            color: #312E26;
         }
 
         .item-info .date {
@@ -195,6 +207,39 @@
             image-rendering: pixelated;
             image-rendering: crisp-edges;
         }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1.5rem;
+            right: 2rem;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
     </style>
 </head>
 
@@ -205,6 +250,7 @@
     <nav>
         <a href="../index.html">Home</a>
         <a href="../CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="../programs/index.html">Programs</a>
         <a href="../blog/index.html">Blog</a>
         <a href="index.html">Art</a>
         <a href="../wildlife/index.html">Sightings</a>
@@ -219,32 +265,8 @@
 
 <section class="portfolio-section">
     <h3 class="section-title">Linocut Prints</h3>
-    <p class="section-description">A collection of my hand-carved linoleum prints. Hover to see descriptions, and use the color pickers to customize!</p>
+    <p class="section-description">A collection of my hand-carved linoleum prints. Hover to see descriptions, click on the name to expand the image, and use the color pickers to customize!</p>
     <div class="portfolio-grid">
-
-        <!-- Common Loon -->
-        <div class="portfolio-item">
-            <div class="image-container">
-                <canvas id="loonCanvas"></canvas>
-                <div class="portfolio-overlay">
-                    <p>A portrait of a loon on a boreal lake. This is the first linocut I completed and is heavily inspired by a loon portrait found on pinterest. Original print is 6"x6".</p>
-                </div>
-            </div>
-            <div class="item-info">
-                <h3>Common Loon</h3>
-                <p class="date">Nov 2025</p>
-            </div>
-            <div class="color-pickers">
-                <div class="color-picker-group">
-                    <label>Carved</label>
-                    <input type="color" id="loonWhite" value="#ffffff">
-                </div>
-                <div class="color-picker-group">
-                    <label>Not Carved</label>
-                    <input type="color" id="loonBlack" value="#000000">
-                </div>
-            </div>
-        </div>
 
         <!-- Winter Coyote -->
         <div class="portfolio-item">
@@ -299,7 +321,7 @@
             <div class="image-container">
                 <canvas id="cardinalCanvas"></canvas>
                 <div class="portfolio-overlay">
-                    <p>A small stamp of a cardinal.Original print is 2 5/8"x3".</p>
+                    <p>A small stamp of a cardinal. Original print is 2 5/8"x3".</p>
                 </div>
             </div>
             <div class="item-info">
@@ -367,54 +389,30 @@
         </div>
 
         <!-- Chickadee -->
-<div class="portfolio-item">
-    <div class="image-container">
-        <canvas id="chickadeeCanvas"></canvas>
-        <div class="portfolio-overlay">
-            <p>A small stamp of a black-capped chickadee. Original stamp is 3"x2".</p>
-        </div>
-    </div>
-    <div class="item-info">
-        <h3>Black-capped Chickadee</h3>
-        <p class="date">Jan 2026</p>
-    </div>
-    <div class="color-pickers">
-        <div class="color-picker-group">
-            <label>Carved</label>
-            <input type="color" id="chickadeeWhite" value="#ffffff">
-        </div>
-        <div class="color-picker-group">
-            <label>Not Carved</label>
-            <input type="color" id="chickadeeBlack" value="#000000">
-        </div>
-    </div>
-</div>
-
-        <!-- Willow Tree -->
         <div class="portfolio-item">
             <div class="image-container">
-                <canvas id="willowCanvas"></canvas>
+                <canvas id="chickadeeCanvas"></canvas>
                 <div class="portfolio-overlay">
-                    <p>A portrait of a graceful willow tree on a lake under moonlight. Inspired by my time spent working for the Chicago Botanic Garden where I would often trim big willow trees. Original print is 6"x6".</p>
+                    <p>A small stamp of a black-capped chickadee. Original stamp is 3"x2".</p>
                 </div>
             </div>
             <div class="item-info">
-                <h3>Willow Tree</h3>
+                <h3>Black-capped Chickadee</h3>
                 <p class="date">Jan 2026</p>
             </div>
             <div class="color-pickers">
                 <div class="color-picker-group">
                     <label>Carved</label>
-                    <input type="color" id="willowWhite" value="#ffffff">
+                    <input type="color" id="chickadeeWhite" value="#ffffff">
                 </div>
                 <div class="color-picker-group">
                     <label>Not Carved</label>
-                    <input type="color" id="willowBlack" value="#000000">
+                    <input type="color" id="chickadeeBlack" value="#000000">
                 </div>
             </div>
         </div>
 
-  <!-- Dodonga/Majidonga -->
+        <!-- Dodonga/Majidonga -->
         <div class="portfolio-item">
             <div class="image-container">
                 <canvas id="dodongaCanvas"></canvas>
@@ -438,7 +436,7 @@
             </div>
         </div>
 
-                <!-- Keen's Long-eared Bat -->
+        <!-- Keen's Long-eared Bat -->
         <div class="portfolio-item">
             <div class="image-container">
                 <canvas id="keensbatCanvas"></canvas>
@@ -461,10 +459,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
-
-    </div>        
 
     </div>
 </section>
@@ -581,7 +575,7 @@
             </div>
         </div>
 
-         <!-- Windwaker -->
+        <!-- Windwaker -->
         <div class="portfolio-item">
             <div class="image-container">
                 <img
@@ -604,15 +598,27 @@
 
 </main>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="">
+</div>
+
 <script>
 function setupEditableCanvas(canvasId, imgSrc, whiteInputId, blackInputId) {
     const canvas = document.getElementById(canvasId);
+    if (!canvas) { console.error(`Canvas not found: ${canvasId}`); return; }
+    
     const ctx = canvas.getContext('2d');
     const img = new Image();
     img.src = imgSrc;
 
     const whiteInput = document.getElementById(whiteInputId);
     const blackInput = document.getElementById(blackInputId);
+
+    if (!whiteInput || !blackInput) { console.error(`Color inputs not found for: ${canvasId}`); return; }
+
+    img.onerror = () => console.error(`Image failed to load: ${imgSrc}`);
 
     img.onload = () => {
         canvas.width = img.width;
@@ -659,18 +665,44 @@ function setupEditableCanvas(canvasId, imgSrc, whiteInputId, blackInputId) {
     }
 }
 
-// Initialize all editable canvases
-setupEditableCanvas('loonCanvas', '../photos/art/linocuts/loon.png', 'loonWhite', 'loonBlack');
-setupEditableCanvas('pygmyowlCanvas', '../photos/art/linocuts/pygmyowl.png', 'whiteColor', 'blackColor');
-setupEditableCanvas('coyoteCanvas', '../photos/art/linocuts/wintercoyote.png', 'coyoteWhite', 'coyoteBlack');
-setupEditableCanvas('cardinalCanvas', '../photos/art/linocuts/cardinal.png', 'cardinalWhite', 'cardinalBlack');
-setupEditableCanvas('barnowlCanvas', '../photos/art/linocuts/barnowl.png', 'barnowlWhite', 'barnowlBlack');
-setupEditableCanvas('creeperCanvas', '../photos/art/linocuts/creeper.png', 'creeperWhite', 'creeperBlack');
-setupEditableCanvas('chickadeeCanvas', '../photos/art/linocuts/chickadee.png', 'chickadeeWhite', 'chickadeeBlack');
-setupEditableCanvas('willowCanvas', '../photos/art/linocuts/willowtree.png', 'willowWhite', 'willowBlack');
-setupEditableCanvas('dodongaCanvas', '../photos/art/linocuts/dodonga.png', 'dodongaWhite', 'dodongaBlack');
-setupEditableCanvas('keensbatCanvas', '../photos/art/linocuts/keenslongearedbat.png', 'keensbatWhite', 'keensbatBlack');
+try { setupEditableCanvas('pygmyowlCanvas', '../photos/art/linocuts/pygmyowl.png', 'whiteColor', 'blackColor'); } catch(e) { console.error('pygmyowl failed:', e); }
+try { setupEditableCanvas('coyoteCanvas', '../photos/art/linocuts/wintercoyote.png', 'coyoteWhite', 'coyoteBlack'); } catch(e) { console.error('coyote failed:', e); }
+try { setupEditableCanvas('cardinalCanvas', '../photos/art/linocuts/cardinal.png', 'cardinalWhite', 'cardinalBlack'); } catch(e) { console.error('cardinal failed:', e); }
+try { setupEditableCanvas('barnowlCanvas', '../photos/art/linocuts/barnowl.png', 'barnowlWhite', 'barnowlBlack'); } catch(e) { console.error('barnowl failed:', e); }
+try { setupEditableCanvas('creeperCanvas', '../photos/art/linocuts/creeper.png', 'creeperWhite', 'creeperBlack'); } catch(e) { console.error('creeper failed:', e); }
+try { setupEditableCanvas('chickadeeCanvas', '../photos/art/linocuts/chickadee.png', 'chickadeeWhite', 'chickadeeBlack'); } catch(e) { console.error('chickadee failed:', e); }
+try { setupEditableCanvas('dodongaCanvas', '../photos/art/linocuts/dodonga.png', 'dodongaWhite', 'dodongaBlack'); } catch(e) { console.error('dodonga failed:', e); }
+try { setupEditableCanvas('keensbatCanvas', '../photos/art/linocuts/keenslongearedbat.png', 'keensbatWhite', 'keensbatBlack'); } catch(e) { console.error('keensbat failed:', e); }
 
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.classList.add('active');
+}
+
+lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+});
+
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    const canvas = item.querySelector('canvas');
+    const img = item.querySelector('img');
+    const title = item.querySelector('.item-info h3');
+    if (!title) return;
+
+    title.addEventListener('click', () => {
+        if (canvas) {
+            openLightbox(canvas.toDataURL());
+        } else if (img) {
+            openLightbox(img.src);
+        }
+    });
+});
 </script>
 
 </body>
