@@ -5,6 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <style>
+        /* ====== Slideshow ====== */
+.slideshow-container {
+    position: relative;
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.slide.active { display: flex; }
+.slide img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+.slide-caption {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    background: white;
+}
+.slideshow-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: white;
+}
+.slide-btn {
+    background: #656D4A;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px; height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+}
+.slide-btn:hover { background: #312E26; }
+.slide-dots { display: flex; gap: 6px; }
+.dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.dot.active { background: #656D4A; }
         * {
             margin: 0;
             padding: 0;
@@ -304,6 +364,35 @@ header nav a:hover {
     <img src="../photos/rosebreastedgrosbeak.png" alt="" class="box-bird box-bird-right-5">
     
     <div class="blog-list">
+        <!-- Indiana Dunes / EEC post -->
+<article class="blog-item">
+    <h3>Program Updates: IDBF and EEC!</h3>
+    <div class="post-meta">May 1, 2026</div>
+    <div class="post-content" id="post-dunes">
+        <p>Hi everyone! This will be my first year attending the Indiana Dunes Birding Festival! You can find me tabling at the youth and family section from 10AM–3PM. Feel free to stop by and make a birdhouse or just chat about this incredible weekend/migration! I will also be leading two family-oriented bird walks with one from 9–10AM and one from 3–4PM. I am super excited to be both involved with the fest this year!</p>
+        <p>I also wanted to share some fun moments from my time at the Evanston Ecology Center thus far including the release of a baby snapping turtle someone brought in, some photos of our critters, and a shot of me with my buddy Mango the bearded dragon. Keep an eye out for more fun programs for us this year including a Twilight Bat Hike coming this August.</p>
+
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="../photos/baby_snapper.png" alt="Baby snapping turtle release">
+                <div class="slide-caption">Baby snapping turtle release at the Evanston Ecology Center</div>
+            </div>
+            <div class="slide">
+                <img src="../photos/me_mango.PNG" alt="Me with Mango the bearded dragon">
+                <div class="slide-caption">Me and my buddy Mango the bearded dragon</div>
+            </div>
+            <div class="slideshow-controls">
+                <button class="slide-btn" onclick="changeSlide(this, -1)">&#8249;</button>
+                <div class="slide-dots">
+                    <div class="dot active" onclick="goToSlide(this, 0)"></div>
+                    <div class="dot" onclick="goToSlide(this, 1)"></div>
+                </div>
+                <button class="slide-btn" onclick="changeSlide(this, 1)">&#8250;</button>
+            </div>
+        </div>
+    </div>
+</article>
+        
         <!-- Gratitude post-->
           <article class="blog-item">
             <h3>I love my jobs: A short note on gratitude</h3>
