@@ -231,10 +231,13 @@ section img {
   border-radius: 10px;
 }
 
-#sightings.list-view .sighting img {
-  width: 150px;
-  height: auto;
+#sightings.grid-view .sighting img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 8px;
+  margin-bottom: 0.8rem;
 }
 
 /* Grid view */
@@ -250,13 +253,6 @@ section img {
   padding: 1rem;
   text-align: center;
   border-radius: 10px;
-}
-
-#sightings.grid-view .sighting img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
 }
 
 /* ====== Sightings Info with Icons ====== */
